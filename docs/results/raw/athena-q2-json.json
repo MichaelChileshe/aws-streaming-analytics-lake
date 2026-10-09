@@ -1,0 +1,24 @@
+{
+ "label": "q2-json",
+ "workgroup": "mvela-engineering",
+ "query_id": "19aa45e8-3eb0-425a-836e-73cd3b051c5a",
+ "state": "SUCCEEDED",
+ "reason": "",
+ "data_scanned_bytes": 7717199675,
+ "data_scanned": "7.19 GB",
+ "engine_ms": 2660,
+ "total_ms": 5373,
+ "statement_type": "DML",
+ "cost_usd": 0.035094,
+ "wall_seconds": 10.4,
+ "header": [
+  "truck_id",
+  "event_ms",
+  "lat",
+  "lon",
+  "speed_kmh",
+  "heading"
+ ],
+ "row_count": 180,
+ "sql": "SELECT truck_id, event_ms, lat, lon, speed_kmh, heading\nFROM mvela_fleet.raw_pings_json\nWHERE truck_id = 'MV-0042'\n  AND event_ms >= 1791331200000 + 28800000 AND event_ms < 1791331200000 + 29700000\nORDER BY event_ms"
+}

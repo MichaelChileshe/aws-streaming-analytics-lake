@@ -1,0 +1,7 @@
+{
+ "left": "build/results/athena-q2-json.csv",
+ "right": "build/results/athena-q2-parquet.csv",
+ "rows": 180,
+ "identical": true,
+ "differences": []
+}

@@ -1,0 +1,1 @@
+RESULT lf-settings: identical to the snapshot taken before the build

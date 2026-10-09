@@ -1,0 +1,21 @@
+{
+ "label": "history-partitions",
+ "workgroup": "mvela-engineering",
+ "query_id": "a8e166ca-6dab-4b2b-b0cb-5d60fda729c7",
+ "state": "SUCCEEDED",
+ "reason": "",
+ "data_scanned_bytes": 4547774,
+ "data_scanned": "4.34 MB",
+ "engine_ms": 2850,
+ "total_ms": 3037,
+ "statement_type": "DML",
+ "cost_usd": 4.8e-05,
+ "wall_seconds": 8.0,
+ "header": [
+  "dt",
+  "pings",
+  "trucks"
+ ],
+ "row_count": 7,
+ "sql": "SELECT dt, count(*) AS pings, count(DISTINCT truck_id) AS trucks\nFROM mvela_fleet.fleet_history\nGROUP BY dt\nORDER BY dt"
+}

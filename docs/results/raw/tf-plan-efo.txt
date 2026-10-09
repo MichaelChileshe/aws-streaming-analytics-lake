@@ -1,0 +1,154 @@
+data.archive_file.alerts: Reading...
+data.archive_file.alerts: Read complete after 0s [id=d5aa1d8e96506c2e9e4536f3034e5ea8d280cc69]
+data.aws_ssm_parameter.al2023: Reading...
+data.aws_caller_identity.current: Reading...
+aws_kinesis_stream.pings: Refreshing state... [id=arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings]
+aws_iam_role.alerts: Refreshing state... [id=mvela-speed-alerts-role]
+aws_iam_role.firehose: Refreshing state... [id=mvela-firehose-role]
+aws_iam_role.lf_registration: Refreshing state... [id=mvela-lf-registration-role]
+aws_vpc.lab: Refreshing state... [id=vpc-0e26080e2ec8262ff]
+aws_cloudwatch_log_group.alerts: Refreshing state... [id=/aws/lambda/mvela-speed-alerts]
+aws_iam_role.sim: Refreshing state... [id=mvela-fleet-sim-role]
+aws_cloudwatch_log_group.firehose: Refreshing state... [id=/aws/kinesisfirehose/mvela-fleet-to-lake]
+data.aws_caller_identity.current: Read complete after 1s [id=<account-id>]
+data.aws_iam_session_context.current: Reading...
+data.aws_iam_session_context.current: Read complete after 0s [id=arn:aws:iam::<account-id>:user/Michael-admin]
+aws_lakeformation_data_lake_settings.this: Refreshing state... [id=669032948]
+data.aws_ssm_parameter.al2023: Read complete after 2s [id=/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64]
+aws_iam_role.analyst: Refreshing state... [id=mvela-ops-analyst]
+aws_s3_bucket.code: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1]
+aws_s3_bucket.lake: Refreshing state... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_s3_bucket.results: Refreshing state... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_glue_catalog_database.fleet: Refreshing state... [id=<account-id>:mvela_fleet]
+aws_cloudwatch_log_stream.firehose_s3: Refreshing state... [id=DestinationDelivery]
+aws_iam_role_policy_attachment.alerts_logs: Refreshing state... [id=mvela-speed-alerts-role/arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole]
+aws_iam_role_policy.alerts: Refreshing state... [id=mvela-speed-alerts-role:read-the-stream]
+aws_iam_role_policy_attachment.sim_ssm: Refreshing state... [id=mvela-fleet-sim-role/arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore]
+aws_iam_instance_profile.sim: Refreshing state... [id=mvela-fleet-sim-profile]
+aws_lambda_function.alerts: Refreshing state... [id=mvela-speed-alerts]
+aws_lakeformation_permissions.analyst_history[0]: Refreshing state... [id=910452064]
+aws_internet_gateway.lab: Refreshing state... [id=igw-0dab094d0458c7c6d]
+aws_subnet.public_a: Refreshing state... [id=subnet-02d83ebba430906b6]
+aws_route_table.public: Refreshing state... [id=rtb-0e4365e02fdf0dac8]
+aws_security_group.sim: Refreshing state... [id=sg-0ff3a6ba1f1f594c8]
+aws_vpc_security_group_egress_rule.sim_all: Refreshing state... [id=sgr-0332bf12476cb5d96]
+aws_lambda_event_source_mapping.alerts: Refreshing state... [id=e0dff12b-45aa-480f-9289-ccda8476522e]
+aws_cloudwatch_metric_alarm.alerts_iterator_age: Refreshing state... [id=mvela-alerts-iterator-age]
+aws_route_table_association.public_a: Refreshing state... [id=rtbassoc-0be9fef867b294b41]
+aws_vpc_endpoint.s3: Refreshing state... [id=vpce-0266a7d92c389c19f]
+aws_route.internet: Refreshing state... [id=r-rtb-0e4365e02fdf0dac81080289494]
+aws_s3_object.app["backfill.py"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1/app/backfill.py]
+aws_s3_object.app["ctl.py"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1/app/ctl.py]
+aws_s3_object.app["sim.py"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1/app/sim.py]
+aws_s3_object.app["common.py"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1/app/common.py]
+aws_s3_object.app["fleet.py"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1/app/fleet.py]
+aws_iam_role_policy.firehose: Refreshing state... [id=mvela-firehose-role:stream-to-lake]
+aws_iam_role_policy.sim: Refreshing state... [id=mvela-fleet-sim-role:stream-history-code]
+aws_glue_catalog_table.fleet_live: Refreshing state... [id=<account-id>:mvela_fleet:fleet_live]
+aws_glue_catalog_table.raw_json: Refreshing state... [id=<account-id>:mvela_fleet:raw_pings_json]
+aws_iam_role_policy.lf_registration: Refreshing state... [id=mvela-lf-registration-role:read-write-curated]
+aws_s3_bucket_lifecycle_configuration.lake: Refreshing state... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_athena_workgroup.analysts: Refreshing state... [id=mvela-analysts]
+aws_s3_bucket_lifecycle_configuration.results: Refreshing state... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_athena_workgroup.engineering: Refreshing state... [id=mvela-engineering]
+aws_athena_workgroup.migration: Refreshing state... [id=mvela-migration]
+aws_lakeformation_resource.curated: Refreshing state... [id=arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1/curated]
+aws_s3_bucket_server_side_encryption_configuration.all["lake"]: Refreshing state... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_s3_bucket_server_side_encryption_configuration.all["results"]: Refreshing state... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_s3_bucket_public_access_block.all["code"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1]
+aws_s3_bucket_server_side_encryption_configuration.all["code"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1]
+aws_s3_bucket_public_access_block.all["lake"]: Refreshing state... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_s3_bucket_public_access_block.all["results"]: Refreshing state... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_lakeformation_permissions.analyst_live: Refreshing state... [id=1190064233]
+aws_lakeformation_permissions.firehose_live: Refreshing state... [id=437827887]
+aws_instance.sim: Refreshing state... [id=i-0e447d1221d0ad5a3]
+aws_s3_bucket_policy.tls_only["lake"]: Refreshing state... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_s3_bucket_policy.tls_only["code"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1]
+aws_s3_bucket_policy.tls_only["results"]: Refreshing state... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_iam_role_policy.analyst: Refreshing state... [id=mvela-ops-analyst:athena-analysts-workgroup]
+aws_kinesis_firehose_delivery_stream.lake: Refreshing state... [id=arn:aws:firehose:us-east-1:<account-id>:deliverystream/mvela-fleet-to-lake]
+aws_cloudwatch_metric_alarm.lake_freshness: Refreshing state... [id=mvela-lake-freshness]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+  ~ update in-place
+-/+ destroy and then create replacement
+
+Terraform will perform the following actions:
+
+  # aws_kinesis_stream_consumer.alerts[0] will be created
+  + resource "aws_kinesis_stream_consumer" "alerts" {
+      + arn                = (known after apply)
+      + creation_timestamp = (known after apply)
+      + id                 = (known after apply)
+      + name               = "mvela-speed-alerts-efo"
+      + region             = "us-east-1"
+      + stream_arn         = "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings"
+      + tags_all           = {
+          + "ManagedBy" = "terraform"
+          + "Project"   = "aws-streaming-analytics-lake"
+        }
+    }
+
+  # aws_lambda_event_source_mapping.alerts must be replaced
+-/+ resource "aws_lambda_event_source_mapping" "alerts" {
+      ~ arn                                = "arn:aws:lambda:us-east-1:<account-id>:event-source-mapping:e0dff12b-45aa-480f-9289-ccda8476522e" -> (known after apply)
+      - bisect_batch_on_function_error     = false -> null
+      ~ event_source_arn                   = "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings" -> (known after apply) # forces replacement
+      ~ function_arn                       = "arn:aws:lambda:us-east-1:<account-id>:function:mvela-speed-alerts" -> (known after apply)
+      - function_response_types            = [] -> null
+      ~ id                                 = "e0dff12b-45aa-480f-9289-ccda8476522e" -> (known after apply)
+      ~ last_modified                      = "2026-10-09T05:28:00Z" -> (known after apply)
+      ~ last_processing_result             = "OK" -> (known after apply)
+      - maximum_batching_window_in_seconds = 0 -> null
+      ~ maximum_record_age_in_seconds      = -1 -> (known after apply)
+      ~ maximum_retry_attempts             = -1 -> (known after apply)
+      ~ parallelization_factor             = 1 -> (known after apply)
+      - queues                             = [] -> null
+      ~ state                              = "Enabled" -> (known after apply)
+      ~ state_transition_reason            = "User action" -> (known after apply)
+      - tags                               = {} -> null
+      - topics                             = [] -> null
+      - tumbling_window_in_seconds         = 0 -> null
+      ~ uuid                               = "e0dff12b-45aa-480f-9289-ccda8476522e" -> (known after apply)
+        # (8 unchanged attributes hidden)
+
+      ~ amazon_managed_kafka_event_source_config (known after apply)
+
+      - destination_config {
+          - on_failure {}
+        }
+
+      ~ self_managed_kafka_event_source_config (known after apply)
+    }
+
+  # aws_lambda_function.alerts will be updated in-place
+  ~ resource "aws_lambda_function" "alerts" {
+        id                             = "mvela-speed-alerts"
+        tags                           = {}
+        # (32 unchanged attributes hidden)
+
+      ~ environment {
+          ~ variables = {
+              ~ "CONSUMER_MODE"   = "polling" -> "efo"
+                # (1 unchanged element hidden)
+            }
+        }
+
+        # (3 unchanged blocks hidden)
+    }
+
+Plan: 2 to add, 1 to change, 1 to destroy.
+
+Changes to Outputs:
+  ~ alerts_consumer     = "polling (shared throughput)" -> (known after apply)
+  ~ alerts_mapping_uuid = "e0dff12b-45aa-480f-9289-ccda8476522e" -> (known after apply)
+
+─────────────────────────────────────────────────────────────────────────────
+
+Saved the plan to: efo.tfplan
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "efo.tfplan"
+Releasing state lock. This may take a few moments...

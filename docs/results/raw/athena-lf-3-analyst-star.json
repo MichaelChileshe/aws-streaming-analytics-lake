@@ -1,0 +1,28 @@
+{
+ "label": "lf-3-analyst-star",
+ "workgroup": "mvela-analysts",
+ "query_id": "05661c51-d168-4205-8642-aea7400385d7",
+ "state": "SUCCEEDED",
+ "reason": "",
+ "data_scanned_bytes": 714596,
+ "data_scanned": "697.85 KB",
+ "engine_ms": 1463,
+ "total_ms": 1819,
+ "statement_type": "DML",
+ "cost_usd": 4.8e-05,
+ "wall_seconds": 3.8,
+ "header": [
+  "truck_id",
+  "depot",
+  "event_ms",
+  "lat",
+  "lon",
+  "speed_kmh",
+  "heading",
+  "engine_on",
+  "fuel_pct",
+  "dt"
+ ],
+ "row_count": 3,
+ "sql": "SELECT * FROM mvela_fleet.fleet_live WHERE dt = '2026-10-09' LIMIT 3"
+}

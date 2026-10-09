@@ -1,0 +1,8 @@
+label,question,format,partition_filter,workgroup,scanned_bytes,scanned,engine_ms,total_ms,cost_usd,rows
+q1-json,"Q1 one day, summary per truck",raw JSON,none,mvela-engineering,7717247824,7.19 GB,1665,4946,0.035094,300
+q1-parquet,"Q1 one day, summary per truck",Parquet,dt filter,mvela-engineering,25117150,23.95 MB,1298,1423,0.000114,300
+q1-parquet-nopart,"Q1 one day, summary per truck",Parquet,no dt filter,mvela-engineering,25117150,23.95 MB,2072,2260,0.000114,300
+q2-json,"Q2 one truck, 15 minutes",raw JSON,none,mvela-engineering,7717199675,7.19 GB,2660,5373,0.035094,180
+q2-parquet,"Q2 one truck, 15 minutes",Parquet,dt filter,mvela-engineering,42371165,40.41 MB,1163,1328,0.000193,180
+ctas-history,"CTAS migration, 7 days JSON to Parquet","raw JSON in, Parquet out",n/a,mvela-migration,7717247824,7.19 GB,9646,9799,0.035094,0
+history-partitions,fleet_history pings per day,Parquet,all 7 days,mvela-engineering,4547774,4.34 MB,2850,3037,4.8e-05,7

@@ -1,0 +1,24 @@
+{
+ "label": "analyst-depot-view",
+ "workgroup": "mvela-analysts",
+ "query_id": "606a272b-049e-40d0-b66a-60323fe5e0a4",
+ "state": "SUCCEEDED",
+ "reason": "",
+ "data_scanned_bytes": 299202,
+ "data_scanned": "292.19 KB",
+ "engine_ms": 999,
+ "total_ms": 1142,
+ "statement_type": "DML",
+ "cost_usd": 4.8e-05,
+ "wall_seconds": 3.8,
+ "header": [
+  "depot",
+  "trucks",
+  "pings",
+  "avg_kmh",
+  "max_kmh",
+  "pings_over_80"
+ ],
+ "row_count": 4,
+ "sql": "SELECT depot,\n       count(DISTINCT truck_id)     AS trucks,\n       count(*)                     AS pings,\n       round(avg(speed_kmh), 1)     AS avg_kmh,\n       max(speed_kmh)               AS max_kmh,\n       count_if(speed_kmh > 80)     AS pings_over_80\nFROM mvela_fleet.fleet_live\nWHERE dt = '2026-10-09'\n  AND event_ms >= 1791526571000\nGROUP BY depot\nORDER BY depot"
+}

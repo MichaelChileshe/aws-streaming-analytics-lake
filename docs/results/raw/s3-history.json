@@ -1,0 +1,19 @@
+{
+ "bucket": "<lake bucket>",
+ "prefix": "curated/fleet_history/",
+ "objects": 210,
+ "total_bytes": 481163795,
+ "total": "458.87 MB",
+ "avg_bytes": 2291256,
+ "min_bytes": 936614,
+ "max_bytes": 3629281,
+ "folders": [
+  "dt=2026-10-02",
+  "dt=2026-10-03",
+  "dt=2026-10-04",
+  "dt=2026-10-05",
+  "dt=2026-10-06",
+  "dt=2026-10-07",
+  "dt=2026-10-08"
+ ]
+}

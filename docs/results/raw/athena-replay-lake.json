@@ -1,0 +1,22 @@
+{
+ "label": "replay-lake",
+ "workgroup": "mvela-engineering",
+ "query_id": "de88d538-c0b4-4053-9401-35ad0b180178",
+ "state": "SUCCEEDED",
+ "reason": "",
+ "data_scanned_bytes": 112978,
+ "data_scanned": "110.33 KB",
+ "engine_ms": 1046,
+ "total_ms": 1251,
+ "statement_type": "DML",
+ "cost_usd": 4.8e-05,
+ "wall_seconds": 4.2,
+ "header": [
+  "pings",
+  "first_ms",
+  "last_ms",
+  "max_kmh"
+ ],
+ "row_count": 1,
+ "sql": "SELECT count(*) AS pings, min(event_ms) AS first_ms, max(event_ms) AS last_ms, max(speed_kmh) AS max_kmh\nFROM mvela_fleet.fleet_live\nWHERE dt = '2026-10-09'\n  AND truck_id = 'MV-0042'\n  AND event_ms >= 1791526378000 AND event_ms < 1791526978000"
+}

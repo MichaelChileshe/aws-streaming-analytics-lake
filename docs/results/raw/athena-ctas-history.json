@@ -1,0 +1,17 @@
+{
+ "label": "ctas-history",
+ "workgroup": "mvela-migration",
+ "query_id": "52ead9f0-cfaf-4d91-a30c-88387a1ff2f1",
+ "state": "SUCCEEDED",
+ "reason": "",
+ "data_scanned_bytes": 7717247824,
+ "data_scanned": "7.19 GB",
+ "engine_ms": 9646,
+ "total_ms": 9799,
+ "statement_type": "DDL",
+ "cost_usd": 0.035094,
+ "wall_seconds": 16.1,
+ "header": [],
+ "row_count": 0,
+ "sql": "CREATE TABLE mvela_fleet.fleet_history\nWITH (\n  format            = 'PARQUET',\n  write_compression = 'SNAPPY',\n  external_location = 's3://mvela-fleet-lake-<account-id>-us-east-1/curated/fleet_history/',\n  partitioned_by    = ARRAY['dt']\n) AS\nSELECT truck_id, depot, event_ms, lat, lon, speed_kmh, heading, engine_on, fuel_pct,\n       driver_id, driver_phone,\n       date_format(from_unixtime(event_ms / 1000), '%Y-%m-%d') AS dt\nFROM mvela_fleet.raw_pings_json"
+}

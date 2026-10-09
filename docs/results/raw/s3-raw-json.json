@@ -1,0 +1,11 @@
+{
+ "bucket": "<lake bucket>",
+ "prefix": "raw/json/",
+ "objects": 168,
+ "total_bytes": 7717117543,
+ "total": "7.19 GB",
+ "avg_bytes": 45935223,
+ "min_bytes": 45916841,
+ "max_bytes": 45954720,
+ "folders": []
+}

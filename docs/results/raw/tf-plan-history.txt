@@ -1,0 +1,126 @@
+data.archive_file.alerts: Reading...
+data.archive_file.alerts: Read complete after 0s [id=d5aa1d8e96506c2e9e4536f3034e5ea8d280cc69]
+data.aws_ssm_parameter.al2023: Reading...
+aws_vpc.lab: Refreshing state... [id=vpc-0e26080e2ec8262ff]
+aws_cloudwatch_log_group.alerts: Refreshing state... [id=/aws/lambda/mvela-speed-alerts]
+aws_kinesis_stream.pings: Refreshing state... [id=arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings]
+aws_iam_role.alerts: Refreshing state... [id=mvela-speed-alerts-role]
+data.aws_caller_identity.current: Reading...
+aws_cloudwatch_log_group.firehose: Refreshing state... [id=/aws/kinesisfirehose/mvela-fleet-to-lake]
+aws_iam_role.firehose: Refreshing state... [id=mvela-firehose-role]
+aws_iam_role.lf_registration: Refreshing state... [id=mvela-lf-registration-role]
+aws_iam_role.sim: Refreshing state... [id=mvela-fleet-sim-role]
+data.aws_caller_identity.current: Read complete after 1s [id=<account-id>]
+data.aws_iam_session_context.current: Reading...
+data.aws_iam_session_context.current: Read complete after 0s [id=arn:aws:iam::<account-id>:user/Michael-admin]
+aws_iam_role.analyst: Refreshing state... [id=mvela-ops-analyst]
+data.aws_ssm_parameter.al2023: Read complete after 2s [id=/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64]
+aws_lakeformation_data_lake_settings.this: Refreshing state... [id=669032948]
+aws_s3_bucket.results: Refreshing state... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_s3_bucket.lake: Refreshing state... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_s3_bucket.code: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1]
+aws_cloudwatch_log_stream.firehose_s3: Refreshing state... [id=DestinationDelivery]
+aws_iam_role_policy_attachment.alerts_logs: Refreshing state... [id=mvela-speed-alerts-role/arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole]
+aws_iam_role_policy.alerts: Refreshing state... [id=mvela-speed-alerts-role:read-the-stream]
+aws_iam_instance_profile.sim: Refreshing state... [id=mvela-fleet-sim-profile]
+aws_iam_role_policy_attachment.sim_ssm: Refreshing state... [id=mvela-fleet-sim-role/arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore]
+aws_glue_catalog_database.fleet: Refreshing state... [id=<account-id>:mvela_fleet]
+aws_lambda_function.alerts: Refreshing state... [id=mvela-speed-alerts]
+aws_security_group.sim: Refreshing state... [id=sg-0ff3a6ba1f1f594c8]
+aws_route_table.public: Refreshing state... [id=rtb-0e4365e02fdf0dac8]
+aws_internet_gateway.lab: Refreshing state... [id=igw-0dab094d0458c7c6d]
+aws_subnet.public_a: Refreshing state... [id=subnet-02d83ebba430906b6]
+aws_vpc_security_group_egress_rule.sim_all: Refreshing state... [id=sgr-0332bf12476cb5d96]
+aws_vpc_endpoint.s3: Refreshing state... [id=vpce-0266a7d92c389c19f]
+aws_cloudwatch_metric_alarm.alerts_iterator_age: Refreshing state... [id=mvela-alerts-iterator-age]
+aws_lambda_event_source_mapping.alerts: Refreshing state... [id=e0dff12b-45aa-480f-9289-ccda8476522e]
+aws_route_table_association.public_a: Refreshing state... [id=rtbassoc-0be9fef867b294b41]
+aws_route.internet: Refreshing state... [id=r-rtb-0e4365e02fdf0dac81080289494]
+aws_iam_role_policy.lf_registration: Refreshing state... [id=mvela-lf-registration-role:read-write-curated]
+aws_iam_role_policy.firehose: Refreshing state... [id=mvela-firehose-role:stream-to-lake]
+aws_glue_catalog_table.raw_json: Refreshing state... [id=<account-id>:mvela_fleet:raw_pings_json]
+aws_s3_bucket_lifecycle_configuration.lake: Refreshing state... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_glue_catalog_table.fleet_live: Refreshing state... [id=<account-id>:mvela_fleet:fleet_live]
+aws_athena_workgroup.migration: Refreshing state... [id=mvela-migration]
+aws_athena_workgroup.engineering: Refreshing state... [id=mvela-engineering]
+aws_s3_bucket_lifecycle_configuration.results: Refreshing state... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_athena_workgroup.analysts: Refreshing state... [id=mvela-analysts]
+aws_iam_role_policy.sim: Refreshing state... [id=mvela-fleet-sim-role:stream-history-code]
+aws_s3_object.app["fleet.py"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1/app/fleet.py]
+aws_s3_object.app["backfill.py"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1/app/backfill.py]
+aws_s3_object.app["common.py"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1/app/common.py]
+aws_s3_object.app["ctl.py"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1/app/ctl.py]
+aws_s3_object.app["sim.py"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1/app/sim.py]
+aws_s3_bucket_public_access_block.all["results"]: Refreshing state... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_s3_bucket_public_access_block.all["code"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1]
+aws_s3_bucket_public_access_block.all["lake"]: Refreshing state... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_s3_bucket_server_side_encryption_configuration.all["code"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1]
+aws_s3_bucket_server_side_encryption_configuration.all["lake"]: Refreshing state... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_s3_bucket_server_side_encryption_configuration.all["results"]: Refreshing state... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_lakeformation_resource.curated: Refreshing state... [id=arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1/curated]
+aws_lakeformation_permissions.firehose_live: Refreshing state... [id=437827887]
+aws_lakeformation_permissions.analyst_live: Refreshing state... [id=1190064233]
+aws_iam_role_policy.analyst: Refreshing state... [id=mvela-ops-analyst:athena-analysts-workgroup]
+aws_s3_bucket_policy.tls_only["lake"]: Refreshing state... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_s3_bucket_policy.tls_only["code"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1]
+aws_s3_bucket_policy.tls_only["results"]: Refreshing state... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_instance.sim: Refreshing state... [id=i-0e447d1221d0ad5a3]
+aws_kinesis_firehose_delivery_stream.lake: Refreshing state... [id=arn:aws:firehose:us-east-1:<account-id>:deliverystream/mvela-fleet-to-lake]
+aws_cloudwatch_metric_alarm.lake_freshness: Refreshing state... [id=mvela-lake-freshness]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_lakeformation_permissions.analyst_history[0] will be created
+  + resource "aws_lakeformation_permissions" "analyst_history" {
+      + catalog_resource              = false
+      + id                            = (known after apply)
+      + permissions                   = [
+          + "SELECT",
+        ]
+      + permissions_with_grant_option = (known after apply)
+      + principal                     = "arn:aws:iam::<account-id>:role/mvela-ops-analyst"
+      + region                        = "us-east-1"
+
+      + data_location (known after apply)
+
+      + database (known after apply)
+
+      + lf_tag (known after apply)
+
+      + lf_tag_policy (known after apply)
+
+      + table (known after apply)
+
+      + table_with_columns {
+          + catalog_id    = (known after apply)
+          + column_names  = [
+              + "depot",
+              + "dt",
+              + "engine_on",
+              + "event_ms",
+              + "fuel_pct",
+              + "heading",
+              + "lat",
+              + "lon",
+              + "speed_kmh",
+              + "truck_id",
+            ]
+          + database_name = "mvela_fleet"
+          + name          = "fleet_history"
+          + wildcard      = false
+        }
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+─────────────────────────────────────────────────────────────────────────────
+
+Saved the plan to: history.tfplan
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "history.tfplan"
+Releasing state lock. This may take a few moments...

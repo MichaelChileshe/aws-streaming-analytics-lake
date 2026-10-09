@@ -1,0 +1,63 @@
+[0] as me, engineering workgroup: the personal columns exist
+  truck_id | driver_id | driver_phone
+  MV-0021 | DRV-0021 | +27 000 000 021
+  MV-0041 | DRV-0041 | +27 000 000 041
+  MV-0076 | DRV-0076 | +27 000 000 076
+RESULT athena lf-0-engineer-pii: SUCCEEDED, scanned 5.32 KB (5,445 bytes), engine 825 ms, total 969 ms, rows 3, cost ~US$0.000048  [mvela-engineering, 545bd139-19c1-4ad3-a19f-c98c8b3a723a]
+  -> PASS  (SUCCEEDED, columns ['truck_id', 'driver_id', 'driver_phone'])
+
+switching identity: arn:aws:sts::<account-id>:assumed-role/mvela-ops-analyst/mvela-analyst-check
+
+[1] analyst: depot summary from fleet_live
+  depot | pings | avg_kmh
+  BFN | 32992 | 59.5
+  JHB | 65989 | 60.7
+  PLK | 32996 | 63.1
+  ... 1 more rows
+RESULT athena lf-1-analyst-summary: SUCCEEDED, scanned 879.68 KB (900,788 bytes), engine 1146 ms, total 1310 ms, rows 4, cost ~US$0.000048  [mvela-analysts, cb07e673-f488-4227-b3d5-5e7c434bfd64]
+  -> PASS  (SUCCEEDED, 4 rows, scanned 879.68 KB)
+
+[2] analyst: truck_id + driver_phone
+  FAILED: COLUMN_NOT_FOUND: Column 'driver_phone' cannot be resolved or requester is not authorized to access requested resources
+RESULT athena lf-2-analyst-pii: FAILED, scanned 0 B (0 bytes), engine 164 ms, total 380 ms, rows 0, cost ~US$0.000000  [mvela-analysts, 021b50b0-2287-4db9-bbed-b8d4be89d089]
+  -> PASS  (FAILED: COLUMN_NOT_FOUND: Column 'driver_phone' cannot be resolved or requester is not authorized to access requested resources)
+
+[3] analyst: SELECT *
+  truck_id | depot | event_ms | lat | lon | speed_kmh | heading | engine_on | fuel_pct | dt
+  MV-0020 | PTA | 1791527209000 | -26.18181 | 28.11731 | 72.9 | 186 | true | 59.6 | 2026-10-09
+  MV-0003 | PTA | 1791523962000 | -25.72108 | 28.27564 | 56.0 | 58 | true | 89.3 | 2026-10-09
+  MV-0021 | PTA | 1791525225000 | -25.64851 | 28.40476 | 59.0 | 36 | true | 60.1 | 2026-10-09
+RESULT athena lf-3-analyst-star: SUCCEEDED, scanned 697.85 KB (714,596 bytes), engine 1463 ms, total 1819 ms, rows 3, cost ~US$0.000048  [mvela-analysts, 05661c51-d168-4205-8642-aea7400385d7]
+  -> PASS  (SUCCEEDED, 10 columns returned ['truck_id', 'depot', 'event_ms', 'lat', 'lon', 'speed_kmh', 'heading', 'engine_on', 'fuel_pct', 'dt'] )
+
+[4] analyst: fleet_history per day
+  dt | pings
+  2026-10-02 | 5184000
+  2026-10-03 | 5184000
+  2026-10-04 | 5184000
+  ... 4 more rows
+RESULT athena lf-4-analyst-history: SUCCEEDED, scanned 0 B (0 bytes), engine 1769 ms, total 1973 ms, rows 7, cost ~US$0.000048  [mvela-analysts, b90e9e31-e269-4326-8fb5-02728d856e70]
+  -> PASS  (SUCCEEDED, 7 days, scanned 0 B )
+
+[5] analyst: the raw JSON export
+  FAILED: TABLE_NOT_FOUND: line 1:22: Table 'awsdatacatalog.mvela_fleet.raw_pings_json' does not exist
+RESULT athena lf-5-analyst-raw: FAILED, scanned 0 B (0 bytes), engine 294 ms, total 551 ms, rows 0, cost ~US$0.000000  [mvela-analysts, 77ff69ac-1c18-4b8d-80e7-454902ef7d8d]
+  -> PASS  (FAILED: TABLE_NOT_FOUND: line 1:22: Table 'awsdatacatalog.mvela_fleet.raw_pings_json' does not exist)
+
+[6] analyst: a query in the engineering workgroup
+  could not start the query: aws: [ERROR]: An error occurred (AccessDeniedException) when calling the StartQueryExecution operation: You are not authorized to perform: athena:StartQueryExecution on the resource. After your AWS administrator or you have updated your permissions, please try again.
+  -> PASS  (NOT_STARTED: aws: [ERROR]: An error occurred (AccessDeniedException) when calling the StartQueryExecution operation: You are not authorized to perform: athena:StartQueryExecution on the resource. Afte)
+
+[7] analyst: list the lake bucket with S3 directly
+  -> PASS  (aws: [ERROR]: An error occurred (AccessDenied) when calling the ListObjectsV2 operation: User: arn:aws:sts::<account-id>:assumed-role/mvela-ops-analyst/mvela-analyst-check is not authorized to perform)
+
+  #  check                                         expected                          result
+  0  engineer reads driver columns                 works                             PASS
+  1  analyst depot summary                         works                             PASS
+  2  analyst asks for driver_phone                 refused (column hidden)           PASS
+  3  analyst SELECT * hides driver columns         10 columns, no driver_*           PASS
+  4  analyst reads fleet_history                   works                             PASS
+  5  analyst reads raw_pings_json                  refused (no LF grant)             PASS
+  6  analyst uses mvela-engineering                refused by IAM                    PASS
+  7  analyst lists the lake in S3                  AccessDenied                      PASS
+RESULT lf-check: 8 of 8 as expected

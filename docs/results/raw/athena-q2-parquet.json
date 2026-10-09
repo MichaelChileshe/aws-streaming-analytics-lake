@@ -1,0 +1,24 @@
+{
+ "label": "q2-parquet",
+ "workgroup": "mvela-engineering",
+ "query_id": "4d71f2e5-c2b3-423e-a7fe-d9e6c983d246",
+ "state": "SUCCEEDED",
+ "reason": "",
+ "data_scanned_bytes": 42371165,
+ "data_scanned": "40.41 MB",
+ "engine_ms": 1163,
+ "total_ms": 1328,
+ "statement_type": "DML",
+ "cost_usd": 0.000193,
+ "wall_seconds": 4.2,
+ "header": [
+  "truck_id",
+  "event_ms",
+  "lat",
+  "lon",
+  "speed_kmh",
+  "heading"
+ ],
+ "row_count": 180,
+ "sql": "SELECT truck_id, event_ms, lat, lon, speed_kmh, heading\nFROM mvela_fleet.fleet_history\nWHERE dt = '2026-10-07'\n  AND truck_id = 'MV-0042'\n  AND event_ms >= 1791331200000 + 28800000 AND event_ms < 1791331200000 + 29700000\nORDER BY event_ms"
+}

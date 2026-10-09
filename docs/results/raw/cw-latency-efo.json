@@ -1,0 +1,21 @@
+{
+ "namespace": "Mvelaphanda/Fleet",
+ "dimensions": {
+  "Consumer": "efo"
+ },
+ "start_utc": "2026-10-09T06:17:00+00:00",
+ "end_utc": "2026-10-09T06:25:00+00:00",
+ "period_s": 480,
+ "metrics": {
+  "PingToAlertLatency": [
+   {
+    "utc": "06:17",
+    "p50": 79.25529511125916,
+    "p95": 127.91240319445764,
+    "p99": 180.89219255360598,
+    "Maximum": 228.0,
+    "SampleCount": 26125.0
+   }
+  ]
+ }
+}

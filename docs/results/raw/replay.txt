@@ -1,0 +1,12 @@
+[i-0e447d1221d0ad5a3] Success in 5 s
+replaying mvela-fleet-pings from 2026-10-09 06:12:58.000 UTC to 2026-10-09 06:22:58.000 UTC, looking for MV-0042
+  shardId-000000000000: 18,900 records read
+  shardId-000000000001: 18,900 records read
+    {"truck_id": "MV-0042", "depot": "PTA", "event_ms": 1791526381000, "lat": -25.71067, "lon": 27.89392, "speed_kmh": 81.0, "heading": 213, "engine_on": true, "fuel_pct": 58.8}
+    {"truck_id": "MV-0042", "depot": "PTA", "event_ms": 1791526386000, "lat": -25.71157, "lon": 27.89344, "speed_kmh": 80.3, "heading": 205, "engine_on": true, "fuel_pct": 58.8}
+    {"truck_id": "MV-0042", "depot": "PTA", "event_ms": 1791526391000, "lat": -25.71247, "lon": 27.89293, "speed_kmh": 81.2, "heading": 206, "engine_on": true, "fuel_pct": 58.8}
+    ... 114 more ...
+    {"truck_id": "MV-0042", "depot": "PTA", "event_ms": 1791526966000, "lat": -25.80373, "lon": 27.87313, "speed_kmh": 67.0, "heading": 194, "engine_on": true, "fuel_pct": 57.9}
+    {"truck_id": "MV-0042", "depot": "PTA", "event_ms": 1791526971000, "lat": -25.80458, "lon": 27.87304, "speed_kmh": 68.3, "heading": 185, "engine_on": true, "fuel_pct": 57.8}
+    {"truck_id": "MV-0042", "depot": "PTA", "event_ms": 1791526976000, "lat": -25.80542, "lon": 27.87283, "speed_kmh": 69.2, "heading": 192, "engine_on": true, "fuel_pct": 57.8}
+RESULT replay {"truck": "MV-0042", "from": "2026-10-09 06:12:58.000 UTC", "to": "2026-10-09 06:22:58.000 UTC", "records_read": 37800, "getrecords_calls": 4, "pings_found": 120, "km_driven": 11.0, "max_kmh": 82.5, "pings_over_80": 19, "seconds": 3.3}

@@ -1,0 +1,2815 @@
+data.archive_file.alerts: Reading...
+data.archive_file.alerts: Read complete after 0s [id=d5aa1d8e96506c2e9e4536f3034e5ea8d280cc69]
+data.aws_caller_identity.current: Reading...
+data.aws_ssm_parameter.al2023: Reading...
+aws_iam_role.sim: Refreshing state... [id=mvela-fleet-sim-role]
+aws_iam_role.lf_registration: Refreshing state... [id=mvela-lf-registration-role]
+aws_cloudwatch_log_group.firehose: Refreshing state... [id=/aws/kinesisfirehose/mvela-fleet-to-lake]
+aws_cloudwatch_log_group.alerts: Refreshing state... [id=/aws/lambda/mvela-speed-alerts]
+aws_iam_role.alerts: Refreshing state... [id=mvela-speed-alerts-role]
+aws_iam_role.firehose: Refreshing state... [id=mvela-firehose-role]
+aws_kinesis_stream.pings: Refreshing state... [id=arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings]
+aws_vpc.lab: Refreshing state... [id=vpc-0e26080e2ec8262ff]
+data.aws_caller_identity.current: Read complete after 0s [id=<account-id>]
+data.aws_iam_session_context.current: Reading...
+data.aws_iam_session_context.current: Read complete after 0s [id=arn:aws:iam::<account-id>:user/Michael-admin]
+aws_s3_bucket.lake: Refreshing state... [id=mvela-fleet-lake-<account-id>-us-east-1]
+data.aws_ssm_parameter.al2023: Read complete after 1s [id=/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64]
+aws_iam_role.analyst: Refreshing state... [id=mvela-ops-analyst]
+aws_s3_bucket.results: Refreshing state... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_s3_bucket.code: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1]
+aws_glue_catalog_database.fleet: Refreshing state... [id=<account-id>:mvela_fleet]
+aws_cloudwatch_log_stream.firehose_s3: Refreshing state... [id=DestinationDelivery]
+aws_kinesis_stream_consumer.alerts[0]: Refreshing state... [id=arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings/consumer/mvela-speed-alerts-efo:1791525028]
+aws_iam_role_policy_attachment.alerts_logs: Refreshing state... [id=mvela-speed-alerts-role/arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole]
+aws_iam_role_policy.alerts: Refreshing state... [id=mvela-speed-alerts-role:read-the-stream]
+aws_iam_instance_profile.sim: Refreshing state... [id=mvela-fleet-sim-profile]
+aws_iam_role_policy_attachment.sim_ssm: Refreshing state... [id=mvela-fleet-sim-role/arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore]
+aws_lambda_function.alerts: Refreshing state... [id=mvela-speed-alerts]
+aws_internet_gateway.lab: Refreshing state... [id=igw-0dab094d0458c7c6d]
+aws_subnet.public_a: Refreshing state... [id=subnet-02d83ebba430906b6]
+aws_route_table.public: Refreshing state... [id=rtb-0e4365e02fdf0dac8]
+aws_security_group.sim: Refreshing state... [id=sg-0ff3a6ba1f1f594c8]
+aws_lakeformation_permissions.analyst_history[0]: Refreshing state... [id=910452064]
+aws_route_table_association.public_a: Refreshing state... [id=rtbassoc-0be9fef867b294b41]
+aws_route.internet: Refreshing state... [id=r-rtb-0e4365e02fdf0dac81080289494]
+aws_vpc_endpoint.s3: Refreshing state... [id=vpce-0266a7d92c389c19f]
+aws_cloudwatch_metric_alarm.alerts_iterator_age: Refreshing state... [id=mvela-alerts-iterator-age]
+aws_lambda_event_source_mapping.alerts: Refreshing state... [id=a0f23d66-c965-4cd9-b401-a879f09e8b93]
+aws_vpc_security_group_egress_rule.sim_all: Refreshing state... [id=sgr-0332bf12476cb5d96]
+aws_iam_role_policy.lf_registration: Refreshing state... [id=mvela-lf-registration-role:read-write-curated]
+aws_iam_role_policy.firehose: Refreshing state... [id=mvela-firehose-role:stream-to-lake]
+aws_s3_bucket_lifecycle_configuration.lake: Refreshing state... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_glue_catalog_table.raw_json: Refreshing state... [id=<account-id>:mvela_fleet:raw_pings_json]
+aws_glue_catalog_table.fleet_live: Refreshing state... [id=<account-id>:mvela_fleet:fleet_live]
+aws_lakeformation_resource.curated: Refreshing state... [id=arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1/curated]
+aws_athena_workgroup.analysts: Refreshing state... [id=mvela-analysts]
+aws_s3_bucket_lifecycle_configuration.results: Refreshing state... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_athena_workgroup.engineering: Refreshing state... [id=mvela-engineering]
+aws_athena_workgroup.migration: Refreshing state... [id=mvela-migration]
+aws_iam_role_policy.sim: Refreshing state... [id=mvela-fleet-sim-role:stream-history-code]
+aws_s3_object.app["backfill.py"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1/app/backfill.py]
+aws_s3_object.app["common.py"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1/app/common.py]
+aws_s3_object.app["fleet.py"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1/app/fleet.py]
+aws_lakeformation_permissions.analyst_live: Refreshing state... [id=1190064233]
+aws_s3_object.app["ctl.py"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1/app/ctl.py]
+aws_s3_object.app["sim.py"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1/app/sim.py]
+aws_lakeformation_permissions.firehose_live: Refreshing state... [id=437827887]
+aws_s3_bucket_public_access_block.all["code"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1]
+aws_s3_bucket_public_access_block.all["results"]: Refreshing state... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_s3_bucket_public_access_block.all["lake"]: Refreshing state... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_s3_bucket_server_side_encryption_configuration.all["code"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1]
+aws_s3_bucket_server_side_encryption_configuration.all["lake"]: Refreshing state... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_s3_bucket_server_side_encryption_configuration.all["results"]: Refreshing state... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_kinesis_firehose_delivery_stream.lake: Refreshing state... [id=arn:aws:firehose:us-east-1:<account-id>:deliverystream/mvela-fleet-to-lake]
+aws_iam_role_policy.analyst: Refreshing state... [id=mvela-ops-analyst:athena-analysts-workgroup]
+aws_s3_bucket_policy.tls_only["code"]: Refreshing state... [id=mvela-lake-code-<account-id>-us-east-1]
+aws_s3_bucket_policy.tls_only["lake"]: Refreshing state... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_s3_bucket_policy.tls_only["results"]: Refreshing state... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_instance.sim: Refreshing state... [id=i-0e447d1221d0ad5a3]
+aws_cloudwatch_metric_alarm.lake_freshness: Refreshing state... [id=mvela-lake-freshness]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_athena_workgroup.analysts will be destroyed
+  - resource "aws_athena_workgroup" "analysts" {
+      - arn           = "arn:aws:athena:us-east-1:<account-id>:workgroup/mvela-analysts" -> null
+      - description   = "Operations analysts and the dashboard: non-personal columns, small queries" -> null
+      - force_destroy = true -> null
+      - id            = "mvela-analysts" -> null
+      - name          = "mvela-analysts" -> null
+      - region        = "us-east-1" -> null
+      - state         = "ENABLED" -> null
+      - tags          = {} -> null
+      - tags_all      = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+
+      - configuration {
+          - bytes_scanned_cutoff_per_query          = 1073741824 -> null
+          - enable_minimum_encryption_configuration = false -> null
+          - enforce_workgroup_configuration         = true -> null
+          - publish_cloudwatch_metrics_enabled      = true -> null
+          - requester_pays_enabled                  = false -> null
+            # (1 unchanged attribute hidden)
+
+          - engine_version {
+              - effective_engine_version = "Athena engine version 3" -> null
+              - selected_engine_version  = "AUTO" -> null
+            }
+
+          - result_configuration {
+              - output_location       = "s3://mvela-athena-results-<account-id>-us-east-1/analysts/" -> null
+                # (1 unchanged attribute hidden)
+
+              - encryption_configuration {
+                  - encryption_option = "SSE_S3" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+        }
+    }
+
+  # aws_athena_workgroup.engineering will be destroyed
+  - resource "aws_athena_workgroup" "engineering" {
+      - arn           = "arn:aws:athena:us-east-1:<account-id>:workgroup/mvela-engineering" -> null
+      - description   = "Data engineering: the raw export, the migration, the lake" -> null
+      - force_destroy = true -> null
+      - id            = "mvela-engineering" -> null
+      - name          = "mvela-engineering" -> null
+      - region        = "us-east-1" -> null
+      - state         = "ENABLED" -> null
+      - tags          = {} -> null
+      - tags_all      = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+
+      - configuration {
+          - bytes_scanned_cutoff_per_query          = 21474836480 -> null
+          - enable_minimum_encryption_configuration = false -> null
+          - enforce_workgroup_configuration         = true -> null
+          - publish_cloudwatch_metrics_enabled      = true -> null
+          - requester_pays_enabled                  = false -> null
+            # (1 unchanged attribute hidden)
+
+          - engine_version {
+              - effective_engine_version = "Athena engine version 3" -> null
+              - selected_engine_version  = "AUTO" -> null
+            }
+
+          - result_configuration {
+              - output_location       = "s3://mvela-athena-results-<account-id>-us-east-1/engineering/" -> null
+                # (1 unchanged attribute hidden)
+
+              - encryption_configuration {
+                  - encryption_option = "SSE_S3" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+        }
+    }
+
+  # aws_athena_workgroup.migration will be destroyed
+  - resource "aws_athena_workgroup" "migration" {
+      - arn           = "arn:aws:athena:us-east-1:<account-id>:workgroup/mvela-migration" -> null
+      - description   = "One-off CTAS migrations that write table data to the lake (external_location)" -> null
+      - force_destroy = true -> null
+      - id            = "mvela-migration" -> null
+      - name          = "mvela-migration" -> null
+      - region        = "us-east-1" -> null
+      - state         = "ENABLED" -> null
+      - tags          = {} -> null
+      - tags_all      = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+
+      - configuration {
+          - bytes_scanned_cutoff_per_query          = 21474836480 -> null
+          - enable_minimum_encryption_configuration = false -> null
+          - enforce_workgroup_configuration         = false -> null
+          - publish_cloudwatch_metrics_enabled      = true -> null
+          - requester_pays_enabled                  = false -> null
+            # (1 unchanged attribute hidden)
+
+          - engine_version {
+              - effective_engine_version = "Athena engine version 3" -> null
+              - selected_engine_version  = "AUTO" -> null
+            }
+
+          - result_configuration {
+              - output_location       = "s3://mvela-athena-results-<account-id>-us-east-1/migration/" -> null
+                # (1 unchanged attribute hidden)
+
+              - encryption_configuration {
+                  - encryption_option = "SSE_S3" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+        }
+    }
+
+  # aws_cloudwatch_log_group.alerts will be destroyed
+  - resource "aws_cloudwatch_log_group" "alerts" {
+      - arn                         = "arn:aws:logs:us-east-1:<account-id>:log-group:/aws/lambda/mvela-speed-alerts" -> null
+      - deletion_protection_enabled = false -> null
+      - id                          = "/aws/lambda/mvela-speed-alerts" -> null
+      - log_group_class             = "STANDARD" -> null
+      - name                        = "/aws/lambda/mvela-speed-alerts" -> null
+      - region                      = "us-east-1" -> null
+      - retention_in_days           = 7 -> null
+      - skip_destroy                = false -> null
+      - tags                        = {} -> null
+      - tags_all                    = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+        # (2 unchanged attributes hidden)
+    }
+
+  # aws_cloudwatch_log_group.firehose will be destroyed
+  - resource "aws_cloudwatch_log_group" "firehose" {
+      - arn                         = "arn:aws:logs:us-east-1:<account-id>:log-group:/aws/kinesisfirehose/mvela-fleet-to-lake" -> null
+      - deletion_protection_enabled = false -> null
+      - id                          = "/aws/kinesisfirehose/mvela-fleet-to-lake" -> null
+      - log_group_class             = "STANDARD" -> null
+      - name                        = "/aws/kinesisfirehose/mvela-fleet-to-lake" -> null
+      - region                      = "us-east-1" -> null
+      - retention_in_days           = 7 -> null
+      - skip_destroy                = false -> null
+      - tags                        = {} -> null
+      - tags_all                    = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+        # (2 unchanged attributes hidden)
+    }
+
+  # aws_cloudwatch_log_stream.firehose_s3 will be destroyed
+  - resource "aws_cloudwatch_log_stream" "firehose_s3" {
+      - arn            = "arn:aws:logs:us-east-1:<account-id>:log-group:/aws/kinesisfirehose/mvela-fleet-to-lake:log-stream:DestinationDelivery" -> null
+      - id             = "DestinationDelivery" -> null
+      - log_group_name = "/aws/kinesisfirehose/mvela-fleet-to-lake" -> null
+      - name           = "DestinationDelivery" -> null
+      - region         = "us-east-1" -> null
+    }
+
+  # aws_cloudwatch_metric_alarm.alerts_iterator_age will be destroyed
+  - resource "aws_cloudwatch_metric_alarm" "alerts_iterator_age" {
+      - actions_enabled                       = true -> null
+      - alarm_actions                         = [] -> null
+      - alarm_description                     = "The speed-alert function is more than 60 s behind the stream: alerts are late." -> null
+      - alarm_name                            = "mvela-alerts-iterator-age" -> null
+      - arn                                   = "arn:aws:cloudwatch:us-east-1:<account-id>:alarm:mvela-alerts-iterator-age" -> null
+      - comparison_operator                   = "GreaterThanThreshold" -> null
+      - datapoints_to_alarm                   = 2 -> null
+      - dimensions                            = {
+          - "FunctionName" = "mvela-speed-alerts"
+        } -> null
+      - evaluation_interval                   = 0 -> null
+      - evaluation_periods                    = 3 -> null
+      - id                                    = "mvela-alerts-iterator-age" -> null
+      - insufficient_data_actions             = [] -> null
+      - metric_name                           = "IteratorAge" -> null
+      - namespace                             = "AWS/Lambda" -> null
+      - ok_actions                            = [] -> null
+      - period                                = 60 -> null
+      - region                                = "us-east-1" -> null
+      - statistic                             = "Maximum" -> null
+      - tags                                  = {} -> null
+      - tags_all                              = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - threshold                             = 60000 -> null
+      - treat_missing_data                    = "notBreaching" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # aws_cloudwatch_metric_alarm.lake_freshness will be destroyed
+  - resource "aws_cloudwatch_metric_alarm" "lake_freshness" {
+      - actions_enabled                       = true -> null
+      - alarm_actions                         = [] -> null
+      - alarm_description                     = "Oldest record waiting in Firehose is older than 5 minutes: dashboards are going stale." -> null
+      - alarm_name                            = "mvela-lake-freshness" -> null
+      - arn                                   = "arn:aws:cloudwatch:us-east-1:<account-id>:alarm:mvela-lake-freshness" -> null
+      - comparison_operator                   = "GreaterThanThreshold" -> null
+      - datapoints_to_alarm                   = 2 -> null
+      - dimensions                            = {
+          - "DeliveryStreamName" = "mvela-fleet-to-lake"
+        } -> null
+      - evaluation_interval                   = 0 -> null
+      - evaluation_periods                    = 3 -> null
+      - id                                    = "mvela-lake-freshness" -> null
+      - insufficient_data_actions             = [] -> null
+      - metric_name                           = "DeliveryToS3.DataFreshness" -> null
+      - namespace                             = "AWS/Firehose" -> null
+      - ok_actions                            = [] -> null
+      - period                                = 60 -> null
+      - region                                = "us-east-1" -> null
+      - statistic                             = "Maximum" -> null
+      - tags                                  = {} -> null
+      - tags_all                              = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - threshold                             = 300 -> null
+      - treat_missing_data                    = "notBreaching" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # aws_glue_catalog_database.fleet will be destroyed
+  - resource "aws_glue_catalog_database" "fleet" {
+      - arn          = "arn:aws:glue:us-east-1:<account-id>:database/mvela_fleet" -> null
+      - catalog_id   = "<account-id>" -> null
+      - description  = "Mvelaphanda fleet telemetry lake" -> null
+      - id           = "<account-id>:mvela_fleet" -> null
+      - name         = "mvela_fleet" -> null
+      - parameters   = {} -> null
+      - region       = "us-east-1" -> null
+      - tags         = {} -> null
+      - tags_all     = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # aws_glue_catalog_table.fleet_live will be destroyed
+  - resource "aws_glue_catalog_table" "fleet_live" {
+      - arn                = "arn:aws:glue:us-east-1:<account-id>:table/mvela_fleet/fleet_live" -> null
+      - catalog_id         = "<account-id>" -> null
+      - database_name      = "mvela_fleet" -> null
+      - description        = "Live pings delivered by Firehose as Parquet, partitioned by UTC day" -> null
+      - id                 = "<account-id>:mvela_fleet:fleet_live" -> null
+      - name               = "fleet_live" -> null
+      - parameters         = {
+          - "classification"              = "parquet"
+          - "projection.dt.format"        = "yyyy-MM-dd"
+          - "projection.dt.interval"      = "1"
+          - "projection.dt.interval.unit" = "DAYS"
+          - "projection.dt.range"         = "NOW-30DAYS,NOW"
+          - "projection.dt.type"          = "date"
+          - "projection.enabled"          = "true"
+          - "storage.location.template"   = "s3://mvela-fleet-lake-<account-id>-us-east-1/curated/fleet_live/dt=${dt}/"
+        } -> null
+      - region             = "us-east-1" -> null
+      - retention          = 0 -> null
+      - table_type         = "EXTERNAL_TABLE" -> null
+        # (3 unchanged attributes hidden)
+
+      - partition_keys {
+          - comment    = "UTC day the ping arrived, YYYY-MM-DD" -> null
+          - name       = "dt" -> null
+          - parameters = {} -> null
+          - type       = "string" -> null
+        }
+
+      - storage_descriptor {
+          - additional_locations      = [] -> null
+          - bucket_columns            = [] -> null
+          - compressed                = false -> null
+          - input_format              = "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat" -> null
+          - location                  = "s3://mvela-fleet-lake-<account-id>-us-east-1/curated/fleet_live/" -> null
+          - number_of_buckets         = 0 -> null
+          - output_format             = "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat" -> null
+          - parameters                = {} -> null
+          - stored_as_sub_directories = false -> null
+
+          - columns {
+              - comment    = "MV-0001 .. MV-0300" -> null
+              - name       = "truck_id" -> null
+              - parameters = {} -> null
+              - type       = "string" -> null
+            }
+          - columns {
+              - comment    = "PTA, JHB, PLK, BFN" -> null
+              - name       = "depot" -> null
+              - parameters = {} -> null
+              - type       = "string" -> null
+            }
+          - columns {
+              - comment    = "ping time, UTC epoch milliseconds" -> null
+              - name       = "event_ms" -> null
+              - parameters = {} -> null
+              - type       = "bigint" -> null
+            }
+          - columns {
+              - comment    = "latitude" -> null
+              - name       = "lat" -> null
+              - parameters = {} -> null
+              - type       = "double" -> null
+            }
+          - columns {
+              - comment    = "longitude" -> null
+              - name       = "lon" -> null
+              - parameters = {} -> null
+              - type       = "double" -> null
+            }
+          - columns {
+              - comment    = "speed, km/h" -> null
+              - name       = "speed_kmh" -> null
+              - parameters = {} -> null
+              - type       = "double" -> null
+            }
+          - columns {
+              - comment    = "degrees" -> null
+              - name       = "heading" -> null
+              - parameters = {} -> null
+              - type       = "int" -> null
+            }
+          - columns {
+              - comment    = "ignition" -> null
+              - name       = "engine_on" -> null
+              - parameters = {} -> null
+              - type       = "boolean" -> null
+            }
+          - columns {
+              - comment    = "tank level, %" -> null
+              - name       = "fuel_pct" -> null
+              - parameters = {} -> null
+              - type       = "double" -> null
+            }
+          - columns {
+              - comment    = "PERSONAL INFORMATION" -> null
+              - name       = "driver_id" -> null
+              - parameters = {} -> null
+              - type       = "string" -> null
+            }
+          - columns {
+              - comment    = "PERSONAL INFORMATION" -> null
+              - name       = "driver_phone" -> null
+              - parameters = {} -> null
+              - type       = "string" -> null
+            }
+
+          - ser_de_info {
+              - name                  = "parquet" -> null
+              - parameters            = {
+                  - "serialization.format" = "1"
+                } -> null
+              - serialization_library = "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe" -> null
+            }
+        }
+    }
+
+  # aws_glue_catalog_table.raw_json will be destroyed
+  - resource "aws_glue_catalog_table" "raw_json" {
+      - arn                = "arn:aws:glue:us-east-1:<account-id>:table/mvela_fleet/raw_pings_json" -> null
+      - catalog_id         = "<account-id>" -> null
+      - database_name      = "mvela_fleet" -> null
+      - description        = "Legacy hourly JSON export, one flat prefix: every query reads every file" -> null
+      - id                 = "<account-id>:mvela_fleet:raw_pings_json" -> null
+      - name               = "raw_pings_json" -> null
+      - parameters         = {
+          - "classification" = "json"
+        } -> null
+      - region             = "us-east-1" -> null
+      - retention          = 0 -> null
+      - table_type         = "EXTERNAL_TABLE" -> null
+        # (3 unchanged attributes hidden)
+
+      - storage_descriptor {
+          - additional_locations      = [] -> null
+          - bucket_columns            = [] -> null
+          - compressed                = false -> null
+          - input_format              = "org.apache.hadoop.mapred.TextInputFormat" -> null
+          - location                  = "s3://mvela-fleet-lake-<account-id>-us-east-1/raw/json/" -> null
+          - number_of_buckets         = 0 -> null
+          - output_format             = "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat" -> null
+          - parameters                = {} -> null
+          - stored_as_sub_directories = false -> null
+
+          - columns {
+              - comment    = "MV-0001 .. MV-0300" -> null
+              - name       = "truck_id" -> null
+              - parameters = {} -> null
+              - type       = "string" -> null
+            }
+          - columns {
+              - comment    = "PTA, JHB, PLK, BFN" -> null
+              - name       = "depot" -> null
+              - parameters = {} -> null
+              - type       = "string" -> null
+            }
+          - columns {
+              - comment    = "ping time, UTC epoch milliseconds" -> null
+              - name       = "event_ms" -> null
+              - parameters = {} -> null
+              - type       = "bigint" -> null
+            }
+          - columns {
+              - comment    = "latitude" -> null
+              - name       = "lat" -> null
+              - parameters = {} -> null
+              - type       = "double" -> null
+            }
+          - columns {
+              - comment    = "longitude" -> null
+              - name       = "lon" -> null
+              - parameters = {} -> null
+              - type       = "double" -> null
+            }
+          - columns {
+              - comment    = "speed, km/h" -> null
+              - name       = "speed_kmh" -> null
+              - parameters = {} -> null
+              - type       = "double" -> null
+            }
+          - columns {
+              - comment    = "degrees" -> null
+              - name       = "heading" -> null
+              - parameters = {} -> null
+              - type       = "int" -> null
+            }
+          - columns {
+              - comment    = "ignition" -> null
+              - name       = "engine_on" -> null
+              - parameters = {} -> null
+              - type       = "boolean" -> null
+            }
+          - columns {
+              - comment    = "tank level, %" -> null
+              - name       = "fuel_pct" -> null
+              - parameters = {} -> null
+              - type       = "double" -> null
+            }
+          - columns {
+              - comment    = "PERSONAL INFORMATION" -> null
+              - name       = "driver_id" -> null
+              - parameters = {} -> null
+              - type       = "string" -> null
+            }
+          - columns {
+              - comment    = "PERSONAL INFORMATION" -> null
+              - name       = "driver_phone" -> null
+              - parameters = {} -> null
+              - type       = "string" -> null
+            }
+
+          - ser_de_info {
+              - name                  = "openx-json" -> null
+              - parameters            = {} -> null
+              - serialization_library = "org.openx.data.jsonserde.JsonSerDe" -> null
+            }
+        }
+    }
+
+  # aws_iam_instance_profile.sim will be destroyed
+  - resource "aws_iam_instance_profile" "sim" {
+      - arn         = "arn:aws:iam::<account-id>:instance-profile/mvela-fleet-sim-profile" -> null
+      - create_date = "2026-10-09T04:42:16Z" -> null
+      - id          = "mvela-fleet-sim-profile" -> null
+      - name        = "mvela-fleet-sim-profile" -> null
+      - path        = "/" -> null
+      - role        = "mvela-fleet-sim-role" -> null
+      - tags        = {} -> null
+      - tags_all    = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - unique_id   = "AIPA3IFWBO65YMN23F2PI" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # aws_iam_role.alerts will be destroyed
+  - resource "aws_iam_role" "alerts" {
+      - arn                   = "arn:aws:iam::<account-id>:role/mvela-speed-alerts-role" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "lambda.amazonaws.com"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2026-10-09T04:42:14Z" -> null
+      - force_detach_policies = false -> null
+      - id                    = "mvela-speed-alerts-role" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "mvela-speed-alerts-role" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - unique_id             = "AROA3IFWBO65722KUNCAL" -> null
+        # (3 unchanged attributes hidden)
+
+      - inline_policy {
+          - name   = "read-the-stream" -> null
+          - policy = jsonencode(
+                {
+                  - Statement = [
+                      - {
+                          - Action   = [
+                              - "kinesis:DescribeStream",
+                              - "kinesis:DescribeStreamSummary",
+                              - "kinesis:GetRecords",
+                              - "kinesis:GetShardIterator",
+                              - "kinesis:ListShards",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings"
+                          - Sid      = "PollTheStream"
+                        },
+                      - {
+                          - Action   = [
+                              - "kinesis:SubscribeToShard",
+                              - "kinesis:DescribeStreamConsumer",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = [
+                              - "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings",
+                              - "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings/consumer/*",
+                            ]
+                          - Sid      = "EnhancedFanOut"
+                        },
+                      - {
+                          - Action   = "kinesis:ListStreams"
+                          - Effect   = "Allow"
+                          - Resource = "*"
+                          - Sid      = "ListStreamsIsAccountWide"
+                        },
+                    ]
+                  - Version   = "2012-10-17"
+                }
+            ) -> null
+        }
+    }
+
+  # aws_iam_role.analyst will be destroyed
+  - resource "aws_iam_role" "analyst" {
+      - arn                   = "arn:aws:iam::<account-id>:role/mvela-ops-analyst" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Condition = {
+                          - ArnEquals = {
+                              - "aws:PrincipalArn" = "arn:aws:iam::<account-id>:user/Michael-admin"
+                            }
+                        }
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - AWS = "arn:aws:iam::<account-id>:root"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2026-10-09T04:42:14Z" -> null
+      - force_detach_policies = false -> null
+      - id                    = "mvela-ops-analyst" -> null
+      - managed_policy_arns   = [] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "mvela-ops-analyst" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - unique_id             = "AROA3IFWBO65QK5L4ECG7" -> null
+        # (3 unchanged attributes hidden)
+
+      - inline_policy {
+          - name   = "athena-analysts-workgroup" -> null
+          - policy = jsonencode(
+                {
+                  - Statement = [
+                      - {
+                          - Action   = [
+                              - "athena:StartQueryExecution",
+                              - "athena:GetQueryExecution",
+                              - "athena:GetQueryResults",
+                              - "athena:StopQueryExecution",
+                              - "athena:GetWorkGroup",
+                              - "athena:ListQueryExecutions",
+                              - "athena:BatchGetQueryExecution",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = "arn:aws:athena:us-east-1:<account-id>:workgroup/mvela-analysts"
+                          - Sid      = "AnalystsWorkgroupOnly"
+                        },
+                      - {
+                          - Action   = [
+                              - "glue:GetDatabase",
+                              - "glue:GetDatabases",
+                              - "glue:GetTable",
+                              - "glue:GetTables",
+                              - "glue:GetPartition",
+                              - "glue:GetPartitions",
+                              - "glue:BatchGetPartition",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = [
+                              - "arn:aws:glue:us-east-1:<account-id>:catalog",
+                              - "arn:aws:glue:us-east-1:<account-id>:database/mvela_fleet",
+                              - "arn:aws:glue:us-east-1:<account-id>:table/mvela_fleet/*",
+                              - "arn:aws:glue:us-east-1:<account-id>:database/default",
+                            ]
+                          - Sid      = "CatalogReads"
+                        },
+                      - {
+                          - Action   = [
+                              - "lakeformation:GetDataAccess",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = "*"
+                          - Sid      = "LakeFormationVendsTheData"
+                        },
+                      - {
+                          - Action   = [
+                              - "s3:GetObject",
+                              - "s3:PutObject",
+                              - "s3:AbortMultipartUpload",
+                              - "s3:ListMultipartUploadParts",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = "arn:aws:s3:::mvela-athena-results-<account-id>-us-east-1/analysts/*"
+                          - Sid      = "OwnQueryResults"
+                        },
+                      - {
+                          - Action    = [
+                              - "s3:ListBucket",
+                            ]
+                          - Condition = {
+                              - StringLike = {
+                                  - "s3:prefix" = [
+                                      - "analysts/",
+                                      - "analysts/*",
+                                    ]
+                                }
+                            }
+                          - Effect    = "Allow"
+                          - Resource  = "arn:aws:s3:::mvela-athena-results-<account-id>-us-east-1"
+                          - Sid       = "ListOwnResultsOnly"
+                        },
+                      - {
+                          - Action   = [
+                              - "s3:GetBucketLocation",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = "arn:aws:s3:::mvela-athena-results-<account-id>-us-east-1"
+                          - Sid      = "ResultsBucketLocation"
+                        },
+                    ]
+                  - Version   = "2012-10-17"
+                }
+            ) -> null
+        }
+    }
+
+  # aws_iam_role.firehose will be destroyed
+  - resource "aws_iam_role" "firehose" {
+      - arn                   = "arn:aws:iam::<account-id>:role/mvela-firehose-role" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "firehose.amazonaws.com"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2026-10-09T04:42:14Z" -> null
+      - force_detach_policies = false -> null
+      - id                    = "mvela-firehose-role" -> null
+      - managed_policy_arns   = [] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "mvela-firehose-role" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - unique_id             = "AROA3IFWBO65RMXRMTLHJ" -> null
+        # (3 unchanged attributes hidden)
+
+      - inline_policy {
+          - name   = "stream-to-lake" -> null
+          - policy = jsonencode(
+                {
+                  - Statement = [
+                      - {
+                          - Action   = [
+                              - "kinesis:DescribeStream",
+                              - "kinesis:DescribeStreamSummary",
+                              - "kinesis:GetShardIterator",
+                              - "kinesis:GetRecords",
+                              - "kinesis:ListShards",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings"
+                          - Sid      = "ReadTheStream"
+                        },
+                      - {
+                          - Action   = [
+                              - "glue:GetTable",
+                              - "glue:GetTableVersion",
+                              - "glue:GetTableVersions",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = [
+                              - "arn:aws:glue:us-east-1:<account-id>:catalog",
+                              - "arn:aws:glue:us-east-1:<account-id>:database/mvela_fleet",
+                              - "arn:aws:glue:us-east-1:<account-id>:table/mvela_fleet/fleet_live",
+                            ]
+                          - Sid      = "ReadTheSchema"
+                        },
+                      - {
+                          - Action   = [
+                              - "s3:GetBucketLocation",
+                              - "s3:ListBucket",
+                              - "s3:ListBucketMultipartUploads",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1"
+                          - Sid      = "TheBucket"
+                        },
+                      - {
+                          - Action   = [
+                              - "s3:PutObject",
+                              - "s3:GetObject",
+                              - "s3:AbortMultipartUpload",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = [
+                              - "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1/curated/fleet_live/*",
+                              - "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1/errors/*",
+                            ]
+                          - Sid      = "WriteLiveAndErrors"
+                        },
+                      - {
+                          - Action   = [
+                              - "logs:PutLogEvents",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = "arn:aws:logs:us-east-1:<account-id>:log-group:/aws/kinesisfirehose/mvela-fleet-to-lake:log-stream:*"
+                          - Sid      = "DeliveryErrorLogs"
+                        },
+                    ]
+                  - Version   = "2012-10-17"
+                }
+            ) -> null
+        }
+    }
+
+  # aws_iam_role.lf_registration will be destroyed
+  - resource "aws_iam_role" "lf_registration" {
+      - arn                   = "arn:aws:iam::<account-id>:role/mvela-lf-registration-role" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "lakeformation.amazonaws.com"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2026-10-09T04:42:14Z" -> null
+      - force_detach_policies = false -> null
+      - id                    = "mvela-lf-registration-role" -> null
+      - managed_policy_arns   = [] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "mvela-lf-registration-role" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - unique_id             = "AROA3IFWBO652VLQ4VFVQ" -> null
+        # (3 unchanged attributes hidden)
+
+      - inline_policy {
+          - name   = "read-write-curated" -> null
+          - policy = jsonencode(
+                {
+                  - Statement = [
+                      - {
+                          - Action   = [
+                              - "s3:GetObject",
+                              - "s3:PutObject",
+                              - "s3:DeleteObject",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1/curated/*"
+                          - Sid      = "CuratedObjects"
+                        },
+                      - {
+                          - Action    = [
+                              - "s3:ListBucket",
+                            ]
+                          - Condition = {
+                              - StringLike = {
+                                  - "s3:prefix" = [
+                                      - "curated/*",
+                                      - "curated/",
+                                    ]
+                                }
+                            }
+                          - Effect    = "Allow"
+                          - Resource  = "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1"
+                          - Sid       = "ListCurated"
+                        },
+                      - {
+                          - Action   = [
+                              - "s3:GetBucketLocation",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1"
+                          - Sid      = "BucketLocation"
+                        },
+                    ]
+                  - Version   = "2012-10-17"
+                }
+            ) -> null
+        }
+    }
+
+  # aws_iam_role.sim will be destroyed
+  - resource "aws_iam_role" "sim" {
+      - arn                   = "arn:aws:iam::<account-id>:role/mvela-fleet-sim-role" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "ec2.amazonaws.com"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2026-10-09T04:42:14Z" -> null
+      - force_detach_policies = false -> null
+      - id                    = "mvela-fleet-sim-role" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "mvela-fleet-sim-role" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - unique_id             = "AROA3IFWBO653GBBOYJVI" -> null
+        # (3 unchanged attributes hidden)
+
+      - inline_policy {
+          - name   = "stream-history-code" -> null
+          - policy = jsonencode(
+                {
+                  - Statement = [
+                      - {
+                          - Action   = [
+                              - "kinesis:PutRecord",
+                              - "kinesis:PutRecords",
+                              - "kinesis:DescribeStreamSummary",
+                              - "kinesis:ListShards",
+                              - "kinesis:GetShardIterator",
+                              - "kinesis:GetRecords",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings"
+                          - Sid      = "WriteAndReplayTheStream"
+                        },
+                      - {
+                          - Action   = [
+                              - "s3:PutObject",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1/raw/json/*"
+                          - Sid      = "UploadTheLegacyExport"
+                        },
+                      - {
+                          - Action   = [
+                              - "s3:GetObject",
+                            ]
+                          - Effect   = "Allow"
+                          - Resource = "arn:aws:s3:::mvela-lake-code-<account-id>-us-east-1/app/*"
+                          - Sid      = "ReadTheCode"
+                        },
+                      - {
+                          - Action    = [
+                              - "s3:ListBucket",
+                            ]
+                          - Condition = {
+                              - StringLike = {
+                                  - "s3:prefix" = [
+                                      - "app/*",
+                                      - "app/",
+                                    ]
+                                }
+                            }
+                          - Effect    = "Allow"
+                          - Resource  = "arn:aws:s3:::mvela-lake-code-<account-id>-us-east-1"
+                          - Sid       = "ListTheCode"
+                        },
+                    ]
+                  - Version   = "2012-10-17"
+                }
+            ) -> null
+        }
+    }
+
+  # aws_iam_role_policy.alerts will be destroyed
+  - resource "aws_iam_role_policy" "alerts" {
+      - id          = "mvela-speed-alerts-role:read-the-stream" -> null
+      - name        = "read-the-stream" -> null
+      - policy      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action   = [
+                          - "kinesis:DescribeStream",
+                          - "kinesis:DescribeStreamSummary",
+                          - "kinesis:GetRecords",
+                          - "kinesis:GetShardIterator",
+                          - "kinesis:ListShards",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings"
+                      - Sid      = "PollTheStream"
+                    },
+                  - {
+                      - Action   = [
+                          - "kinesis:SubscribeToShard",
+                          - "kinesis:DescribeStreamConsumer",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = [
+                          - "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings",
+                          - "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings/consumer/*",
+                        ]
+                      - Sid      = "EnhancedFanOut"
+                    },
+                  - {
+                      - Action   = "kinesis:ListStreams"
+                      - Effect   = "Allow"
+                      - Resource = "*"
+                      - Sid      = "ListStreamsIsAccountWide"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - role        = "mvela-speed-alerts-role" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # aws_iam_role_policy.analyst will be destroyed
+  - resource "aws_iam_role_policy" "analyst" {
+      - id          = "mvela-ops-analyst:athena-analysts-workgroup" -> null
+      - name        = "athena-analysts-workgroup" -> null
+      - policy      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action   = [
+                          - "athena:StartQueryExecution",
+                          - "athena:GetQueryExecution",
+                          - "athena:GetQueryResults",
+                          - "athena:StopQueryExecution",
+                          - "athena:GetWorkGroup",
+                          - "athena:ListQueryExecutions",
+                          - "athena:BatchGetQueryExecution",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:athena:us-east-1:<account-id>:workgroup/mvela-analysts"
+                      - Sid      = "AnalystsWorkgroupOnly"
+                    },
+                  - {
+                      - Action   = [
+                          - "glue:GetDatabase",
+                          - "glue:GetDatabases",
+                          - "glue:GetTable",
+                          - "glue:GetTables",
+                          - "glue:GetPartition",
+                          - "glue:GetPartitions",
+                          - "glue:BatchGetPartition",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = [
+                          - "arn:aws:glue:us-east-1:<account-id>:catalog",
+                          - "arn:aws:glue:us-east-1:<account-id>:database/mvela_fleet",
+                          - "arn:aws:glue:us-east-1:<account-id>:table/mvela_fleet/*",
+                          - "arn:aws:glue:us-east-1:<account-id>:database/default",
+                        ]
+                      - Sid      = "CatalogReads"
+                    },
+                  - {
+                      - Action   = [
+                          - "lakeformation:GetDataAccess",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "*"
+                      - Sid      = "LakeFormationVendsTheData"
+                    },
+                  - {
+                      - Action   = [
+                          - "s3:GetObject",
+                          - "s3:PutObject",
+                          - "s3:AbortMultipartUpload",
+                          - "s3:ListMultipartUploadParts",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:s3:::mvela-athena-results-<account-id>-us-east-1/analysts/*"
+                      - Sid      = "OwnQueryResults"
+                    },
+                  - {
+                      - Action    = [
+                          - "s3:ListBucket",
+                        ]
+                      - Condition = {
+                          - StringLike = {
+                              - "s3:prefix" = [
+                                  - "analysts/",
+                                  - "analysts/*",
+                                ]
+                            }
+                        }
+                      - Effect    = "Allow"
+                      - Resource  = "arn:aws:s3:::mvela-athena-results-<account-id>-us-east-1"
+                      - Sid       = "ListOwnResultsOnly"
+                    },
+                  - {
+                      - Action   = [
+                          - "s3:GetBucketLocation",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:s3:::mvela-athena-results-<account-id>-us-east-1"
+                      - Sid      = "ResultsBucketLocation"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - role        = "mvela-ops-analyst" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # aws_iam_role_policy.firehose will be destroyed
+  - resource "aws_iam_role_policy" "firehose" {
+      - id          = "mvela-firehose-role:stream-to-lake" -> null
+      - name        = "stream-to-lake" -> null
+      - policy      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action   = [
+                          - "kinesis:DescribeStream",
+                          - "kinesis:DescribeStreamSummary",
+                          - "kinesis:GetShardIterator",
+                          - "kinesis:GetRecords",
+                          - "kinesis:ListShards",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings"
+                      - Sid      = "ReadTheStream"
+                    },
+                  - {
+                      - Action   = [
+                          - "glue:GetTable",
+                          - "glue:GetTableVersion",
+                          - "glue:GetTableVersions",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = [
+                          - "arn:aws:glue:us-east-1:<account-id>:catalog",
+                          - "arn:aws:glue:us-east-1:<account-id>:database/mvela_fleet",
+                          - "arn:aws:glue:us-east-1:<account-id>:table/mvela_fleet/fleet_live",
+                        ]
+                      - Sid      = "ReadTheSchema"
+                    },
+                  - {
+                      - Action   = [
+                          - "s3:GetBucketLocation",
+                          - "s3:ListBucket",
+                          - "s3:ListBucketMultipartUploads",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1"
+                      - Sid      = "TheBucket"
+                    },
+                  - {
+                      - Action   = [
+                          - "s3:PutObject",
+                          - "s3:GetObject",
+                          - "s3:AbortMultipartUpload",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = [
+                          - "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1/curated/fleet_live/*",
+                          - "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1/errors/*",
+                        ]
+                      - Sid      = "WriteLiveAndErrors"
+                    },
+                  - {
+                      - Action   = [
+                          - "logs:PutLogEvents",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:logs:us-east-1:<account-id>:log-group:/aws/kinesisfirehose/mvela-fleet-to-lake:log-stream:*"
+                      - Sid      = "DeliveryErrorLogs"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - role        = "mvela-firehose-role" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # aws_iam_role_policy.lf_registration will be destroyed
+  - resource "aws_iam_role_policy" "lf_registration" {
+      - id          = "mvela-lf-registration-role:read-write-curated" -> null
+      - name        = "read-write-curated" -> null
+      - policy      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action   = [
+                          - "s3:GetObject",
+                          - "s3:PutObject",
+                          - "s3:DeleteObject",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1/curated/*"
+                      - Sid      = "CuratedObjects"
+                    },
+                  - {
+                      - Action    = [
+                          - "s3:ListBucket",
+                        ]
+                      - Condition = {
+                          - StringLike = {
+                              - "s3:prefix" = [
+                                  - "curated/*",
+                                  - "curated/",
+                                ]
+                            }
+                        }
+                      - Effect    = "Allow"
+                      - Resource  = "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1"
+                      - Sid       = "ListCurated"
+                    },
+                  - {
+                      - Action   = [
+                          - "s3:GetBucketLocation",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1"
+                      - Sid      = "BucketLocation"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - role        = "mvela-lf-registration-role" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # aws_iam_role_policy.sim will be destroyed
+  - resource "aws_iam_role_policy" "sim" {
+      - id          = "mvela-fleet-sim-role:stream-history-code" -> null
+      - name        = "stream-history-code" -> null
+      - policy      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action   = [
+                          - "kinesis:PutRecord",
+                          - "kinesis:PutRecords",
+                          - "kinesis:DescribeStreamSummary",
+                          - "kinesis:ListShards",
+                          - "kinesis:GetShardIterator",
+                          - "kinesis:GetRecords",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings"
+                      - Sid      = "WriteAndReplayTheStream"
+                    },
+                  - {
+                      - Action   = [
+                          - "s3:PutObject",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1/raw/json/*"
+                      - Sid      = "UploadTheLegacyExport"
+                    },
+                  - {
+                      - Action   = [
+                          - "s3:GetObject",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:s3:::mvela-lake-code-<account-id>-us-east-1/app/*"
+                      - Sid      = "ReadTheCode"
+                    },
+                  - {
+                      - Action    = [
+                          - "s3:ListBucket",
+                        ]
+                      - Condition = {
+                          - StringLike = {
+                              - "s3:prefix" = [
+                                  - "app/*",
+                                  - "app/",
+                                ]
+                            }
+                        }
+                      - Effect    = "Allow"
+                      - Resource  = "arn:aws:s3:::mvela-lake-code-<account-id>-us-east-1"
+                      - Sid       = "ListTheCode"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - role        = "mvela-fleet-sim-role" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # aws_iam_role_policy_attachment.alerts_logs will be destroyed
+  - resource "aws_iam_role_policy_attachment" "alerts_logs" {
+      - id         = "mvela-speed-alerts-role/arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole" -> null
+      - role       = "mvela-speed-alerts-role" -> null
+    }
+
+  # aws_iam_role_policy_attachment.sim_ssm will be destroyed
+  - resource "aws_iam_role_policy_attachment" "sim_ssm" {
+      - id         = "mvela-fleet-sim-role/arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore" -> null
+      - role       = "mvela-fleet-sim-role" -> null
+    }
+
+  # aws_instance.sim will be destroyed
+  - resource "aws_instance" "sim" {
+      - ami                                  = "ami-0d27e0fb3bac4d724" -> null
+      - arn                                  = "arn:aws:ec2:us-east-1:<account-id>:instance/i-0e447d1221d0ad5a3" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-east-1a" -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+      - ebs_optimized                        = false -> null
+      - force_destroy                        = false -> null
+      - get_password_data                    = false -> null
+      - hibernation                          = false -> null
+      - iam_instance_profile                 = "mvela-fleet-sim-profile" -> null
+      - id                                   = "i-0e447d1221d0ad5a3" -> null
+      - instance_initiated_shutdown_behavior = "stop" -> null
+      - instance_state                       = "running" -> null
+      - instance_type                        = "c7i.large" -> null
+      - ipv6_address_count                   = 0 -> null
+      - ipv6_addresses                       = [] -> null
+      - monitoring                           = false -> null
+      - placement_partition_number           = 0 -> null
+      - primary_network_interface_id         = "eni-09a4893ec2c5d3348" -> null
+      - private_dns                          = "ip-10-130-1-191.ec2.internal" -> null
+      - private_ip                           = "10.130.1.191" -> null
+      - public_ip                            = "100.26.147.46" -> null
+      - region                               = "us-east-1" -> null
+      - secondary_private_ips                = [] -> null
+      - security_groups                      = [] -> null
+      - source_dest_check                    = true -> null
+      - subnet_id                            = "subnet-02d83ebba430906b6" -> null
+      - tags                                 = {
+          - "Name" = "mvela-fleet-sim"
+        } -> null
+      - tags_all                             = {
+          - "ManagedBy" = "terraform"
+          - "Name"      = "mvela-fleet-sim"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - tenancy                              = "default" -> null
+      - user_data                            = <<-EOT
+            #!/bin/bash
+            # Boot script for mvela-fleet-sim (rendered by Terraform): Python 3.12 + boto3, the tool code
+            # from S3, the tool commands, and a systemd unit for the live fleet.
+            set -euxo pipefail
+            mkdir -p /opt/mvela-lake
+            # Amazon Linux 2023's default python3 is 3.9, which current boto3 releases no longer support.
+            if dnf install -y python3.12 python3.12-pip; then PY=python3.12; else dnf install -y python3-pip; PY=python3; fi
+            $PY -m venv /opt/mvela-lake/venv
+            /opt/mvela-lake/venv/bin/pip install --quiet --upgrade pip
+            /opt/mvela-lake/venv/bin/pip install --quiet --upgrade boto3
+            
+            cat > /etc/mvela-lake.conf <<'CONF'
+            REGION=us-east-1
+            STREAM=mvela-fleet-pings
+            LAKE_BUCKET=mvela-fleet-lake-<account-id>-us-east-1
+            RAW_PREFIX=raw/json/
+            CONF
+            chmod 644 /etc/mvela-lake.conf
+            
+            # mvela-sync: copy the tool code from S3 and print each file's SHA-256 (compare with terraform output app_sha256).
+            cat > /usr/local/bin/mvela-sync <<'SYNC'
+            #!/bin/bash
+            set -euo pipefail
+            aws s3 cp --recursive --only-show-errors --region us-east-1 s3://mvela-lake-code-<account-id>-us-east-1/app/ /opt/mvela-lake/
+            cd /opt/mvela-lake && sha256sum -- *.py
+            SYNC
+            chmod 755 /usr/local/bin/mvela-sync
+            # The instance role can take a few seconds to be usable after launch: retry for up to 5 minutes.
+            for i in $(seq 1 20); do /usr/local/bin/mvela-sync && break; echo "code not reachable yet (attempt $i), retrying in 15 s"; sleep 15; done
+            test -f /opt/mvela-lake/sim.py
+            
+            printf '#!/bin/bash\ncd /opt/mvela-lake && exec /opt/mvela-lake/venv/bin/python -u /opt/mvela-lake/sim.py "$@"\n' > /usr/local/bin/fleet-sim
+            printf '#!/bin/bash\ncd /opt/mvela-lake && exec /opt/mvela-lake/venv/bin/python -u /opt/mvela-lake/backfill.py "$@"\n' > /usr/local/bin/fleet-backfill
+            printf '#!/bin/bash\ncd /opt/mvela-lake && exec /opt/mvela-lake/venv/bin/python -u /opt/mvela-lake/ctl.py "$@"\n' > /usr/local/bin/fleet-ctl
+            chmod 755 /usr/local/bin/fleet-sim /usr/local/bin/fleet-backfill /usr/local/bin/fleet-ctl
+            
+            # The live fleet runs as a service: systemctl start / stop fleet-sim, output in journalctl -u fleet-sim.
+            cat > /etc/systemd/system/fleet-sim.service <<'UNIT'
+            [Unit]
+            Description=Mvelaphanda live fleet: 300 trucks pinging the Kinesis stream every 5 seconds
+            After=network-online.target
+            
+            [Service]
+            ExecStart=/usr/local/bin/fleet-sim
+            Restart=on-failure
+            RestartSec=5
+            KillSignal=SIGTERM
+            TimeoutStopSec=30
+            UNIT
+            systemctl daemon-reload
+            
+            /opt/mvela-lake/venv/bin/python -c "import sys, boto3; print('python packages ok: python', sys.version.split()[0], 'boto3', boto3.__version__)"
+            echo "mvela-fleet-sim ready"
+        EOT -> null
+      - user_data_replace_on_change          = true -> null
+      - vpc_security_group_ids               = [
+          - "sg-0ff3a6ba1f1f594c8",
+        ] -> null
+        # (9 unchanged attributes hidden)
+
+      - capacity_reservation_specification {
+          - capacity_reservation_preference = "open" -> null
+        }
+
+      - cpu_options {
+          - core_count            = 1 -> null
+          - threads_per_core      = 2 -> null
+            # (2 unchanged attributes hidden)
+        }
+
+      - enclave_options {
+          - enabled = false -> null
+        }
+
+      - maintenance_options {
+          - auto_recovery = "default" -> null
+        }
+
+      - metadata_options {
+          - http_endpoint               = "enabled" -> null
+          - http_protocol_ipv6          = "disabled" -> null
+          - http_put_response_hop_limit = 2 -> null
+          - http_tokens                 = "required" -> null
+          - instance_metadata_tags      = "disabled" -> null
+        }
+
+      - primary_network_interface {
+          - delete_on_termination = true -> null
+          - network_interface_id  = "eni-09a4893ec2c5d3348" -> null
+        }
+
+      - private_dns_name_options {
+          - enable_resource_name_dns_a_record    = false -> null
+          - enable_resource_name_dns_aaaa_record = false -> null
+          - hostname_type                        = "ip-name" -> null
+        }
+
+      - root_block_device {
+          - delete_on_termination = true -> null
+          - device_name           = "/dev/xvda" -> null
+          - encrypted             = true -> null
+          - iops                  = 3000 -> null
+          - kms_key_id            = "arn:aws:kms:us-east-1:<account-id>:key/fa956852-6a94-48f9-9315-fe5d975d6b38" -> null
+          - tags                  = {} -> null
+          - tags_all              = {
+              - "ManagedBy" = "terraform"
+              - "Project"   = "aws-streaming-analytics-lake"
+            } -> null
+          - throughput            = 125 -> null
+          - volume_id             = "vol-0e66342f40063c05c" -> null
+          - volume_size           = 8 -> null
+          - volume_type           = "gp3" -> null
+        }
+    }
+
+  # aws_internet_gateway.lab will be destroyed
+  - resource "aws_internet_gateway" "lab" {
+      - arn      = "arn:aws:ec2:us-east-1:<account-id>:internet-gateway/igw-0dab094d0458c7c6d" -> null
+      - id       = "igw-0dab094d0458c7c6d" -> null
+      - owner_id = "<account-id>" -> null
+      - region   = "us-east-1" -> null
+      - tags     = {
+          - "Name" = "mvela-lake-igw"
+        } -> null
+      - tags_all = {
+          - "ManagedBy" = "terraform"
+          - "Name"      = "mvela-lake-igw"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - vpc_id   = "vpc-0e26080e2ec8262ff" -> null
+    }
+
+  # aws_kinesis_firehose_delivery_stream.lake will be destroyed
+  - resource "aws_kinesis_firehose_delivery_stream" "lake" {
+      - arn            = "arn:aws:firehose:us-east-1:<account-id>:deliverystream/mvela-fleet-to-lake" -> null
+      - destination    = "extended_s3" -> null
+      - destination_id = "destinationId-000000000001" -> null
+      - id             = "arn:aws:firehose:us-east-1:<account-id>:deliverystream/mvela-fleet-to-lake" -> null
+      - name           = "mvela-fleet-to-lake" -> null
+      - region         = "us-east-1" -> null
+      - tags           = {} -> null
+      - tags_all       = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - version_id     = "1" -> null
+
+      - extended_s3_configuration {
+          - bucket_arn          = "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1" -> null
+          - buffering_interval  = 60 -> null
+          - buffering_size      = 64 -> null
+          - compression_format  = "UNCOMPRESSED" -> null
+          - custom_time_zone    = "UTC" -> null
+          - error_output_prefix = "errors/fleet_live/!{firehose:error-output-type}/dt=!{timestamp:yyyy-MM-dd}/" -> null
+          - prefix              = "curated/fleet_live/dt=!{timestamp:yyyy-MM-dd}/" -> null
+          - role_arn            = "arn:aws:iam::<account-id>:role/mvela-firehose-role" -> null
+          - s3_backup_mode      = "Disabled" -> null
+            # (2 unchanged attributes hidden)
+
+          - cloudwatch_logging_options {
+              - enabled         = true -> null
+              - log_group_name  = "/aws/kinesisfirehose/mvela-fleet-to-lake" -> null
+              - log_stream_name = "DestinationDelivery" -> null
+            }
+
+          - data_format_conversion_configuration {
+              - enabled = true -> null
+
+              - input_format_configuration {
+                  - deserializer {
+                      - open_x_json_ser_de {
+                          - case_insensitive                         = true -> null
+                          - column_to_json_key_mappings              = {} -> null
+                          - convert_dots_in_json_keys_to_underscores = false -> null
+                        }
+                    }
+                }
+
+              - output_format_configuration {
+                  - serializer {
+                      - parquet_ser_de {
+                          - block_size_bytes              = 268435456 -> null
+                          - compression                   = "SNAPPY" -> null
+                          - enable_dictionary_compression = false -> null
+                          - max_padding_bytes             = 0 -> null
+                          - page_size_bytes               = 1048576 -> null
+                          - writer_version                = "V1" -> null
+                        }
+                    }
+                }
+
+              - schema_configuration {
+                  - database_name = "mvela_fleet" -> null
+                  - region        = "us-east-1" -> null
+                  - role_arn      = "arn:aws:iam::<account-id>:role/mvela-firehose-role" -> null
+                  - table_name    = "fleet_live" -> null
+                  - version_id    = "LATEST" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+
+          - processing_configuration {
+              - enabled = false -> null
+            }
+        }
+
+      - kinesis_source_configuration {
+          - kinesis_stream_arn = "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings" -> null
+          - role_arn           = "arn:aws:iam::<account-id>:role/mvela-firehose-role" -> null
+        }
+
+      - server_side_encryption {
+          - enabled  = false -> null
+          - key_type = "AWS_OWNED_CMK" -> null
+            # (1 unchanged attribute hidden)
+        }
+    }
+
+  # aws_kinesis_stream.pings will be destroyed
+  - resource "aws_kinesis_stream" "pings" {
+      - arn                       = "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings" -> null
+      - encryption_type           = "KMS" -> null
+      - enforce_consumer_deletion = true -> null
+      - id                        = "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings" -> null
+      - kms_key_id                = "alias/aws/kinesis" -> null
+      - max_record_size_in_kib    = 1024 -> null
+      - name                      = "mvela-fleet-pings" -> null
+      - region                    = "us-east-1" -> null
+      - retention_period          = 24 -> null
+      - shard_count               = 2 -> null
+      - shard_level_metrics       = [
+          - "IncomingRecords",
+        ] -> null
+      - tags                      = {} -> null
+      - tags_all                  = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - warm_throughput_mib_ps    = 0 -> null
+
+      - stream_mode_details {
+          - stream_mode = "PROVISIONED" -> null
+        }
+    }
+
+  # aws_kinesis_stream_consumer.alerts[0] will be destroyed
+  - resource "aws_kinesis_stream_consumer" "alerts" {
+      - arn                = "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings/consumer/mvela-speed-alerts-efo:1791525028" -> null
+      - creation_timestamp = "2026-10-09T05:50:28Z" -> null
+      - id                 = "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings/consumer/mvela-speed-alerts-efo:1791525028" -> null
+      - name               = "mvela-speed-alerts-efo" -> null
+      - region             = "us-east-1" -> null
+      - stream_arn         = "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings" -> null
+      - tags               = {} -> null
+      - tags_all           = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+    }
+
+  # aws_lakeformation_permissions.analyst_history[0] will be destroyed
+  - resource "aws_lakeformation_permissions" "analyst_history" {
+      - catalog_resource              = false -> null
+      - id                            = "910452064" -> null
+      - permissions                   = [
+          - "SELECT",
+        ] -> null
+      - permissions_with_grant_option = [] -> null
+      - principal                     = "arn:aws:iam::<account-id>:role/mvela-ops-analyst" -> null
+      - region                        = "us-east-1" -> null
+
+      - table_with_columns {
+          - catalog_id            = "<account-id>" -> null
+          - column_names          = [
+              - "depot",
+              - "dt",
+              - "engine_on",
+              - "event_ms",
+              - "fuel_pct",
+              - "heading",
+              - "lat",
+              - "lon",
+              - "speed_kmh",
+              - "truck_id",
+            ] -> null
+          - database_name         = "mvela_fleet" -> null
+          - excluded_column_names = [] -> null
+          - name                  = "fleet_history" -> null
+          - wildcard              = false -> null
+        }
+    }
+
+  # aws_lakeformation_permissions.analyst_live will be destroyed
+  - resource "aws_lakeformation_permissions" "analyst_live" {
+      - catalog_resource              = false -> null
+      - id                            = "1190064233" -> null
+      - permissions                   = [
+          - "SELECT",
+        ] -> null
+      - permissions_with_grant_option = [] -> null
+      - principal                     = "arn:aws:iam::<account-id>:role/mvela-ops-analyst" -> null
+      - region                        = "us-east-1" -> null
+
+      - table_with_columns {
+          - catalog_id            = "<account-id>" -> null
+          - column_names          = [
+              - "depot",
+              - "dt",
+              - "engine_on",
+              - "event_ms",
+              - "fuel_pct",
+              - "heading",
+              - "lat",
+              - "lon",
+              - "speed_kmh",
+              - "truck_id",
+            ] -> null
+          - database_name         = "mvela_fleet" -> null
+          - excluded_column_names = [] -> null
+          - name                  = "fleet_live" -> null
+          - wildcard              = false -> null
+        }
+    }
+
+  # aws_lakeformation_permissions.firehose_live will be destroyed
+  - resource "aws_lakeformation_permissions" "firehose_live" {
+      - catalog_resource              = false -> null
+      - id                            = "437827887" -> null
+      - permissions                   = [
+          - "DESCRIBE",
+          - "SELECT",
+        ] -> null
+      - permissions_with_grant_option = [] -> null
+      - principal                     = "arn:aws:iam::<account-id>:role/mvela-firehose-role" -> null
+      - region                        = "us-east-1" -> null
+
+      - table {
+          - catalog_id    = "<account-id>" -> null
+          - database_name = "mvela_fleet" -> null
+          - name          = "fleet_live" -> null
+          - wildcard      = false -> null
+        }
+    }
+
+  # aws_lakeformation_resource.curated will be destroyed
+  - resource "aws_lakeformation_resource" "curated" {
+      - arn                     = "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1/curated" -> null
+      - hybrid_access_enabled   = false -> null
+      - id                      = "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1/curated" -> null
+      - region                  = "us-east-1" -> null
+      - role_arn                = "arn:aws:iam::<account-id>:role/mvela-lf-registration-role" -> null
+      - use_service_linked_role = false -> null
+      - with_privileged_access  = false -> null
+    }
+
+  # aws_lambda_event_source_mapping.alerts will be destroyed
+  - resource "aws_lambda_event_source_mapping" "alerts" {
+      - arn                                = "arn:aws:lambda:us-east-1:<account-id>:event-source-mapping:a0f23d66-c965-4cd9-b401-a879f09e8b93" -> null
+      - batch_size                         = 500 -> null
+      - bisect_batch_on_function_error     = false -> null
+      - enabled                            = true -> null
+      - event_source_arn                   = "arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings/consumer/mvela-speed-alerts-efo:1791525028" -> null
+      - function_arn                       = "arn:aws:lambda:us-east-1:<account-id>:function:mvela-speed-alerts" -> null
+      - function_name                      = "arn:aws:lambda:us-east-1:<account-id>:function:mvela-speed-alerts" -> null
+      - function_response_types            = [] -> null
+      - id                                 = "a0f23d66-c965-4cd9-b401-a879f09e8b93" -> null
+      - last_modified                      = "2026-10-09T05:51:00Z" -> null
+      - last_processing_result             = "OK" -> null
+      - maximum_batching_window_in_seconds = 0 -> null
+      - maximum_record_age_in_seconds      = -1 -> null
+      - maximum_retry_attempts             = -1 -> null
+      - parallelization_factor             = 1 -> null
+      - queues                             = [] -> null
+      - region                             = "us-east-1" -> null
+      - starting_position                  = "LATEST" -> null
+      - state                              = "Enabled" -> null
+      - state_transition_reason            = "User action" -> null
+      - tags                               = {} -> null
+      - tags_all                           = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - topics                             = [] -> null
+      - tumbling_window_in_seconds         = 0 -> null
+      - uuid                               = "a0f23d66-c965-4cd9-b401-a879f09e8b93" -> null
+        # (2 unchanged attributes hidden)
+
+      - destination_config {
+          - on_failure {}
+        }
+    }
+
+  # aws_lambda_function.alerts will be destroyed
+  - resource "aws_lambda_function" "alerts" {
+      - architectures                  = [
+          - "arm64",
+        ] -> null
+      - arn                            = "arn:aws:lambda:us-east-1:<account-id>:function:mvela-speed-alerts" -> null
+      - code_sha256                    = "jAO7kXADs6scp7XkMW6bY5qiG3arBzUIVqUq8DixCP0=" -> null
+      - filename                       = "./../build/alerts.zip" -> null
+      - function_name                  = "mvela-speed-alerts" -> null
+      - handler                        = "alerts.handler" -> null
+      - id                             = "mvela-speed-alerts" -> null
+      - invoke_arn                     = "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:<account-id>:function:mvela-speed-alerts/invocations" -> null
+      - last_modified                  = "2026-10-09T05:50:28.000+0000" -> null
+      - layers                         = [] -> null
+      - memory_size                    = 256 -> null
+      - package_type                   = "Zip" -> null
+      - publish                        = false -> null
+      - qualified_arn                  = "arn:aws:lambda:us-east-1:<account-id>:function:mvela-speed-alerts:$LATEST" -> null
+      - qualified_invoke_arn           = "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:<account-id>:function:mvela-speed-alerts:$LATEST/invocations" -> null
+      - region                         = "us-east-1" -> null
+      - reserved_concurrent_executions = -1 -> null
+      - response_streaming_invoke_arn  = "arn:aws:apigateway:us-east-1:lambda:path/2021-11-15/functions/arn:aws:lambda:us-east-1:<account-id>:function:mvela-speed-alerts/response-streaming-invocations" -> null
+      - role                           = "arn:aws:iam::<account-id>:role/mvela-speed-alerts-role" -> null
+      - runtime                        = "python3.13" -> null
+      - skip_destroy                   = false -> null
+      - source_code_hash               = "jAO7kXADs6scp7XkMW6bY5qiG3arBzUIVqUq8DixCP0=" -> null
+      - source_code_size               = 1509 -> null
+      - tags                           = {} -> null
+      - tags_all                       = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - timeout                        = 30 -> null
+      - version                        = "$LATEST" -> null
+        # (7 unchanged attributes hidden)
+
+      - environment {
+          - variables = {
+              - "CONSUMER_MODE"   = "efo"
+              - "SPEED_LIMIT_KMH" = "80"
+            } -> null
+        }
+
+      - ephemeral_storage {
+          - size = 512 -> null
+        }
+
+      - logging_config {
+          - log_format            = "Text" -> null
+          - log_group             = "/aws/lambda/mvela-speed-alerts" -> null
+            # (2 unchanged attributes hidden)
+        }
+
+      - tracing_config {
+          - mode = "PassThrough" -> null
+        }
+    }
+
+  # aws_route.internet will be destroyed
+  - resource "aws_route" "internet" {
+      - destination_cidr_block      = "0.0.0.0/0" -> null
+      - gateway_id                  = "igw-0dab094d0458c7c6d" -> null
+      - id                          = "r-rtb-0e4365e02fdf0dac81080289494" -> null
+      - origin                      = "CreateRoute" -> null
+      - region                      = "us-east-1" -> null
+      - route_table_id              = "rtb-0e4365e02fdf0dac8" -> null
+      - state                       = "active" -> null
+        # (14 unchanged attributes hidden)
+    }
+
+  # aws_route_table.public will be destroyed
+  - resource "aws_route_table" "public" {
+      - arn              = "arn:aws:ec2:us-east-1:<account-id>:route-table/rtb-0e4365e02fdf0dac8" -> null
+      - id               = "rtb-0e4365e02fdf0dac8" -> null
+      - owner_id         = "<account-id>" -> null
+      - propagating_vgws = [] -> null
+      - region           = "us-east-1" -> null
+      - route            = [
+          - {
+              - cidr_block                 = "0.0.0.0/0"
+              - gateway_id                 = "igw-0dab094d0458c7c6d"
+                # (12 unchanged attributes hidden)
+            },
+        ] -> null
+      - tags             = {
+          - "Name" = "mvela-lake-public-rt"
+        } -> null
+      - tags_all         = {
+          - "ManagedBy" = "terraform"
+          - "Name"      = "mvela-lake-public-rt"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - vpc_id           = "vpc-0e26080e2ec8262ff" -> null
+    }
+
+  # aws_route_table_association.public_a will be destroyed
+  - resource "aws_route_table_association" "public_a" {
+      - id             = "rtbassoc-0be9fef867b294b41" -> null
+      - region         = "us-east-1" -> null
+      - route_table_id = "rtb-0e4365e02fdf0dac8" -> null
+      - subnet_id      = "subnet-02d83ebba430906b6" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # aws_s3_bucket.code will be destroyed
+  - resource "aws_s3_bucket" "code" {
+      - arn                         = "arn:aws:s3:::mvela-lake-code-<account-id>-us-east-1" -> null
+      - bucket                      = "mvela-lake-code-<account-id>-us-east-1" -> null
+      - bucket_domain_name          = "mvela-lake-code-<account-id>-us-east-1.s3.amazonaws.com" -> null
+      - bucket_namespace            = "global" -> null
+      - bucket_region               = "us-east-1" -> null
+      - bucket_regional_domain_name = "mvela-lake-code-<account-id>-us-east-1.s3.us-east-1.amazonaws.com" -> null
+      - force_destroy               = true -> null
+      - hosted_zone_id              = "Z3AQBSTGFYJSTF" -> null
+      - id                          = "mvela-lake-code-<account-id>-us-east-1" -> null
+      - object_lock_enabled         = false -> null
+      - policy                      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "s3:*"
+                      - Condition = {
+                          - Bool = {
+                              - "aws:SecureTransport" = "false"
+                            }
+                        }
+                      - Effect    = "Deny"
+                      - Principal = "*"
+                      - Resource  = [
+                          - "arn:aws:s3:::mvela-lake-code-<account-id>-us-east-1",
+                          - "arn:aws:s3:::mvela-lake-code-<account-id>-us-east-1/*",
+                        ]
+                      - Sid       = "TLSOnly"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - region                      = "us-east-1" -> null
+      - request_payer               = "BucketOwner" -> null
+      - tags                        = {} -> null
+      - tags_all                    = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+        # (2 unchanged attributes hidden)
+
+      - grant {
+          - id          = "a672cb3389fb02a3443315c3797c82d61c8bcef5c2a2372511d6a0a5fdc2b0ef" -> null
+          - permissions = [
+              - "FULL_CONTROL",
+            ] -> null
+          - type        = "CanonicalUser" -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - server_side_encryption_configuration {
+          - rule {
+              - bucket_key_enabled = false -> null
+
+              - apply_server_side_encryption_by_default {
+                  - sse_algorithm     = "AES256" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+        }
+
+      - versioning {
+          - enabled    = false -> null
+          - mfa_delete = false -> null
+        }
+    }
+
+  # aws_s3_bucket.lake will be destroyed
+  - resource "aws_s3_bucket" "lake" {
+      - arn                         = "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1" -> null
+      - bucket                      = "mvela-fleet-lake-<account-id>-us-east-1" -> null
+      - bucket_domain_name          = "mvela-fleet-lake-<account-id>-us-east-1.s3.amazonaws.com" -> null
+      - bucket_namespace            = "global" -> null
+      - bucket_region               = "us-east-1" -> null
+      - bucket_regional_domain_name = "mvela-fleet-lake-<account-id>-us-east-1.s3.us-east-1.amazonaws.com" -> null
+      - force_destroy               = true -> null
+      - hosted_zone_id              = "Z3AQBSTGFYJSTF" -> null
+      - id                          = "mvela-fleet-lake-<account-id>-us-east-1" -> null
+      - object_lock_enabled         = false -> null
+      - policy                      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "s3:*"
+                      - Condition = {
+                          - Bool = {
+                              - "aws:SecureTransport" = "false"
+                            }
+                        }
+                      - Effect    = "Deny"
+                      - Principal = "*"
+                      - Resource  = [
+                          - "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1",
+                          - "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1/*",
+                        ]
+                      - Sid       = "TLSOnly"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - region                      = "us-east-1" -> null
+      - request_payer               = "BucketOwner" -> null
+      - tags                        = {} -> null
+      - tags_all                    = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+        # (2 unchanged attributes hidden)
+
+      - grant {
+          - id          = "a672cb3389fb02a3443315c3797c82d61c8bcef5c2a2372511d6a0a5fdc2b0ef" -> null
+          - permissions = [
+              - "FULL_CONTROL",
+            ] -> null
+          - type        = "CanonicalUser" -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - lifecycle_rule {
+          - abort_incomplete_multipart_upload_days = 1 -> null
+          - enabled                                = true -> null
+          - id                                     = "abort-incomplete-uploads" -> null
+          - tags                                   = {} -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - server_side_encryption_configuration {
+          - rule {
+              - bucket_key_enabled = false -> null
+
+              - apply_server_side_encryption_by_default {
+                  - sse_algorithm     = "AES256" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+        }
+
+      - versioning {
+          - enabled    = false -> null
+          - mfa_delete = false -> null
+        }
+    }
+
+  # aws_s3_bucket.results will be destroyed
+  - resource "aws_s3_bucket" "results" {
+      - arn                         = "arn:aws:s3:::mvela-athena-results-<account-id>-us-east-1" -> null
+      - bucket                      = "mvela-athena-results-<account-id>-us-east-1" -> null
+      - bucket_domain_name          = "mvela-athena-results-<account-id>-us-east-1.s3.amazonaws.com" -> null
+      - bucket_namespace            = "global" -> null
+      - bucket_region               = "us-east-1" -> null
+      - bucket_regional_domain_name = "mvela-athena-results-<account-id>-us-east-1.s3.us-east-1.amazonaws.com" -> null
+      - force_destroy               = true -> null
+      - hosted_zone_id              = "Z3AQBSTGFYJSTF" -> null
+      - id                          = "mvela-athena-results-<account-id>-us-east-1" -> null
+      - object_lock_enabled         = false -> null
+      - policy                      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "s3:*"
+                      - Condition = {
+                          - Bool = {
+                              - "aws:SecureTransport" = "false"
+                            }
+                        }
+                      - Effect    = "Deny"
+                      - Principal = "*"
+                      - Resource  = [
+                          - "arn:aws:s3:::mvela-athena-results-<account-id>-us-east-1",
+                          - "arn:aws:s3:::mvela-athena-results-<account-id>-us-east-1/*",
+                        ]
+                      - Sid       = "TLSOnly"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - region                      = "us-east-1" -> null
+      - request_payer               = "BucketOwner" -> null
+      - tags                        = {} -> null
+      - tags_all                    = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+        # (2 unchanged attributes hidden)
+
+      - grant {
+          - id          = "a672cb3389fb02a3443315c3797c82d61c8bcef5c2a2372511d6a0a5fdc2b0ef" -> null
+          - permissions = [
+              - "FULL_CONTROL",
+            ] -> null
+          - type        = "CanonicalUser" -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - lifecycle_rule {
+          - abort_incomplete_multipart_upload_days = 1 -> null
+          - enabled                                = true -> null
+          - id                                     = "expire-results-after-7-days" -> null
+          - tags                                   = {} -> null
+            # (1 unchanged attribute hidden)
+
+          - expiration {
+              - days                         = 7 -> null
+              - expired_object_delete_marker = false -> null
+                # (1 unchanged attribute hidden)
+            }
+        }
+
+      - server_side_encryption_configuration {
+          - rule {
+              - bucket_key_enabled = false -> null
+
+              - apply_server_side_encryption_by_default {
+                  - sse_algorithm     = "AES256" -> null
+                    # (1 unchanged attribute hidden)
+                }
+            }
+        }
+
+      - versioning {
+          - enabled    = false -> null
+          - mfa_delete = false -> null
+        }
+    }
+
+  # aws_s3_bucket_lifecycle_configuration.lake will be destroyed
+  - resource "aws_s3_bucket_lifecycle_configuration" "lake" {
+      - bucket                                 = "mvela-fleet-lake-<account-id>-us-east-1" -> null
+      - id                                     = "mvela-fleet-lake-<account-id>-us-east-1" -> null
+      - region                                 = "us-east-1" -> null
+      - transition_default_minimum_object_size = "all_storage_classes_128K" -> null
+        # (1 unchanged attribute hidden)
+
+      - rule {
+          - id     = "abort-incomplete-uploads" -> null
+          - status = "Enabled" -> null
+            # (1 unchanged attribute hidden)
+
+          - abort_incomplete_multipart_upload {
+              - days_after_initiation = 1 -> null
+            }
+
+          - filter {
+                # (1 unchanged attribute hidden)
+            }
+        }
+    }
+
+  # aws_s3_bucket_lifecycle_configuration.results will be destroyed
+  - resource "aws_s3_bucket_lifecycle_configuration" "results" {
+      - bucket                                 = "mvela-athena-results-<account-id>-us-east-1" -> null
+      - id                                     = "mvela-athena-results-<account-id>-us-east-1" -> null
+      - region                                 = "us-east-1" -> null
+      - transition_default_minimum_object_size = "all_storage_classes_128K" -> null
+        # (1 unchanged attribute hidden)
+
+      - rule {
+          - id     = "expire-results-after-7-days" -> null
+          - status = "Enabled" -> null
+            # (1 unchanged attribute hidden)
+
+          - abort_incomplete_multipart_upload {
+              - days_after_initiation = 1 -> null
+            }
+
+          - expiration {
+              - days                         = 7 -> null
+              - expired_object_delete_marker = false -> null
+            }
+
+          - filter {
+                # (1 unchanged attribute hidden)
+            }
+        }
+    }
+
+  # aws_s3_bucket_policy.tls_only["code"] will be destroyed
+  - resource "aws_s3_bucket_policy" "tls_only" {
+      - bucket = "mvela-lake-code-<account-id>-us-east-1" -> null
+      - id     = "mvela-lake-code-<account-id>-us-east-1" -> null
+      - policy = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "s3:*"
+                      - Condition = {
+                          - Bool = {
+                              - "aws:SecureTransport" = "false"
+                            }
+                        }
+                      - Effect    = "Deny"
+                      - Principal = "*"
+                      - Resource  = [
+                          - "arn:aws:s3:::mvela-lake-code-<account-id>-us-east-1",
+                          - "arn:aws:s3:::mvela-lake-code-<account-id>-us-east-1/*",
+                        ]
+                      - Sid       = "TLSOnly"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - region = "us-east-1" -> null
+    }
+
+  # aws_s3_bucket_policy.tls_only["lake"] will be destroyed
+  - resource "aws_s3_bucket_policy" "tls_only" {
+      - bucket = "mvela-fleet-lake-<account-id>-us-east-1" -> null
+      - id     = "mvela-fleet-lake-<account-id>-us-east-1" -> null
+      - policy = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "s3:*"
+                      - Condition = {
+                          - Bool = {
+                              - "aws:SecureTransport" = "false"
+                            }
+                        }
+                      - Effect    = "Deny"
+                      - Principal = "*"
+                      - Resource  = [
+                          - "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1",
+                          - "arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1/*",
+                        ]
+                      - Sid       = "TLSOnly"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - region = "us-east-1" -> null
+    }
+
+  # aws_s3_bucket_policy.tls_only["results"] will be destroyed
+  - resource "aws_s3_bucket_policy" "tls_only" {
+      - bucket = "mvela-athena-results-<account-id>-us-east-1" -> null
+      - id     = "mvela-athena-results-<account-id>-us-east-1" -> null
+      - policy = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "s3:*"
+                      - Condition = {
+                          - Bool = {
+                              - "aws:SecureTransport" = "false"
+                            }
+                        }
+                      - Effect    = "Deny"
+                      - Principal = "*"
+                      - Resource  = [
+                          - "arn:aws:s3:::mvela-athena-results-<account-id>-us-east-1",
+                          - "arn:aws:s3:::mvela-athena-results-<account-id>-us-east-1/*",
+                        ]
+                      - Sid       = "TLSOnly"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - region = "us-east-1" -> null
+    }
+
+  # aws_s3_bucket_public_access_block.all["code"] will be destroyed
+  - resource "aws_s3_bucket_public_access_block" "all" {
+      - block_public_acls       = true -> null
+      - block_public_policy     = true -> null
+      - bucket                  = "mvela-lake-code-<account-id>-us-east-1" -> null
+      - id                      = "mvela-lake-code-<account-id>-us-east-1" -> null
+      - ignore_public_acls      = true -> null
+      - region                  = "us-east-1" -> null
+      - restrict_public_buckets = true -> null
+    }
+
+  # aws_s3_bucket_public_access_block.all["lake"] will be destroyed
+  - resource "aws_s3_bucket_public_access_block" "all" {
+      - block_public_acls       = true -> null
+      - block_public_policy     = true -> null
+      - bucket                  = "mvela-fleet-lake-<account-id>-us-east-1" -> null
+      - id                      = "mvela-fleet-lake-<account-id>-us-east-1" -> null
+      - ignore_public_acls      = true -> null
+      - region                  = "us-east-1" -> null
+      - restrict_public_buckets = true -> null
+    }
+
+  # aws_s3_bucket_public_access_block.all["results"] will be destroyed
+  - resource "aws_s3_bucket_public_access_block" "all" {
+      - block_public_acls       = true -> null
+      - block_public_policy     = true -> null
+      - bucket                  = "mvela-athena-results-<account-id>-us-east-1" -> null
+      - id                      = "mvela-athena-results-<account-id>-us-east-1" -> null
+      - ignore_public_acls      = true -> null
+      - region                  = "us-east-1" -> null
+      - restrict_public_buckets = true -> null
+    }
+
+  # aws_s3_bucket_server_side_encryption_configuration.all["code"] will be destroyed
+  - resource "aws_s3_bucket_server_side_encryption_configuration" "all" {
+      - bucket                = "mvela-lake-code-<account-id>-us-east-1" -> null
+      - id                    = "mvela-lake-code-<account-id>-us-east-1" -> null
+      - region                = "us-east-1" -> null
+        # (1 unchanged attribute hidden)
+
+      - rule {
+          - blocked_encryption_types = [
+              - "SSE-C",
+            ] -> null
+          - bucket_key_enabled       = false -> null
+
+          - apply_server_side_encryption_by_default {
+              - sse_algorithm     = "AES256" -> null
+                # (1 unchanged attribute hidden)
+            }
+        }
+    }
+
+  # aws_s3_bucket_server_side_encryption_configuration.all["lake"] will be destroyed
+  - resource "aws_s3_bucket_server_side_encryption_configuration" "all" {
+      - bucket                = "mvela-fleet-lake-<account-id>-us-east-1" -> null
+      - id                    = "mvela-fleet-lake-<account-id>-us-east-1" -> null
+      - region                = "us-east-1" -> null
+        # (1 unchanged attribute hidden)
+
+      - rule {
+          - blocked_encryption_types = [
+              - "SSE-C",
+            ] -> null
+          - bucket_key_enabled       = false -> null
+
+          - apply_server_side_encryption_by_default {
+              - sse_algorithm     = "AES256" -> null
+                # (1 unchanged attribute hidden)
+            }
+        }
+    }
+
+  # aws_s3_bucket_server_side_encryption_configuration.all["results"] will be destroyed
+  - resource "aws_s3_bucket_server_side_encryption_configuration" "all" {
+      - bucket                = "mvela-athena-results-<account-id>-us-east-1" -> null
+      - id                    = "mvela-athena-results-<account-id>-us-east-1" -> null
+      - region                = "us-east-1" -> null
+        # (1 unchanged attribute hidden)
+
+      - rule {
+          - blocked_encryption_types = [
+              - "SSE-C",
+            ] -> null
+          - bucket_key_enabled       = false -> null
+
+          - apply_server_side_encryption_by_default {
+              - sse_algorithm     = "AES256" -> null
+                # (1 unchanged attribute hidden)
+            }
+        }
+    }
+
+  # aws_s3_object.app["backfill.py"] will be destroyed
+  - resource "aws_s3_object" "app" {
+      - arn                           = "arn:aws:s3:::mvela-lake-code-<account-id>-us-east-1/app/backfill.py" -> null
+      - bucket                        = "mvela-lake-code-<account-id>-us-east-1" -> null
+      - bucket_key_enabled            = false -> null
+      - content_type                  = "application/octet-stream" -> null
+      - etag                          = "0845ee26737cbf467869182a4200b5a2" -> null
+      - force_destroy                 = false -> null
+      - id                            = "mvela-lake-code-<account-id>-us-east-1/app/backfill.py" -> null
+      - key                           = "app/backfill.py" -> null
+      - metadata                      = {} -> null
+      - region                        = "us-east-1" -> null
+      - server_side_encryption        = "AES256" -> null
+      - source                        = "./../app/backfill.py" -> null
+      - storage_class                 = "STANDARD" -> null
+      - tags                          = {} -> null
+      - tags_all                      = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+        # (14 unchanged attributes hidden)
+    }
+
+  # aws_s3_object.app["common.py"] will be destroyed
+  - resource "aws_s3_object" "app" {
+      - arn                           = "arn:aws:s3:::mvela-lake-code-<account-id>-us-east-1/app/common.py" -> null
+      - bucket                        = "mvela-lake-code-<account-id>-us-east-1" -> null
+      - bucket_key_enabled            = false -> null
+      - content_type                  = "application/octet-stream" -> null
+      - etag                          = "c2c37b95d488ae76c1748382ca7e30d0" -> null
+      - force_destroy                 = false -> null
+      - id                            = "mvela-lake-code-<account-id>-us-east-1/app/common.py" -> null
+      - key                           = "app/common.py" -> null
+      - metadata                      = {} -> null
+      - region                        = "us-east-1" -> null
+      - server_side_encryption        = "AES256" -> null
+      - source                        = "./../app/common.py" -> null
+      - storage_class                 = "STANDARD" -> null
+      - tags                          = {} -> null
+      - tags_all                      = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+        # (14 unchanged attributes hidden)
+    }
+
+  # aws_s3_object.app["ctl.py"] will be destroyed
+  - resource "aws_s3_object" "app" {
+      - arn                           = "arn:aws:s3:::mvela-lake-code-<account-id>-us-east-1/app/ctl.py" -> null
+      - bucket                        = "mvela-lake-code-<account-id>-us-east-1" -> null
+      - bucket_key_enabled            = false -> null
+      - content_type                  = "application/octet-stream" -> null
+      - etag                          = "d066a19cb8cc6b6dfa5ef165bd2ede83" -> null
+      - force_destroy                 = false -> null
+      - id                            = "mvela-lake-code-<account-id>-us-east-1/app/ctl.py" -> null
+      - key                           = "app/ctl.py" -> null
+      - metadata                      = {} -> null
+      - region                        = "us-east-1" -> null
+      - server_side_encryption        = "AES256" -> null
+      - source                        = "./../app/ctl.py" -> null
+      - storage_class                 = "STANDARD" -> null
+      - tags                          = {} -> null
+      - tags_all                      = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+        # (14 unchanged attributes hidden)
+    }
+
+  # aws_s3_object.app["fleet.py"] will be destroyed
+  - resource "aws_s3_object" "app" {
+      - arn                           = "arn:aws:s3:::mvela-lake-code-<account-id>-us-east-1/app/fleet.py" -> null
+      - bucket                        = "mvela-lake-code-<account-id>-us-east-1" -> null
+      - bucket_key_enabled            = false -> null
+      - content_type                  = "application/octet-stream" -> null
+      - etag                          = "2555d0b2de8b26997aec519e506ebd38" -> null
+      - force_destroy                 = false -> null
+      - id                            = "mvela-lake-code-<account-id>-us-east-1/app/fleet.py" -> null
+      - key                           = "app/fleet.py" -> null
+      - metadata                      = {} -> null
+      - region                        = "us-east-1" -> null
+      - server_side_encryption        = "AES256" -> null
+      - source                        = "./../app/fleet.py" -> null
+      - storage_class                 = "STANDARD" -> null
+      - tags                          = {} -> null
+      - tags_all                      = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+        # (14 unchanged attributes hidden)
+    }
+
+  # aws_s3_object.app["sim.py"] will be destroyed
+  - resource "aws_s3_object" "app" {
+      - arn                           = "arn:aws:s3:::mvela-lake-code-<account-id>-us-east-1/app/sim.py" -> null
+      - bucket                        = "mvela-lake-code-<account-id>-us-east-1" -> null
+      - bucket_key_enabled            = false -> null
+      - content_type                  = "application/octet-stream" -> null
+      - etag                          = "6b6f7462116184d0487e9ac6cf266be7" -> null
+      - force_destroy                 = false -> null
+      - id                            = "mvela-lake-code-<account-id>-us-east-1/app/sim.py" -> null
+      - key                           = "app/sim.py" -> null
+      - metadata                      = {} -> null
+      - region                        = "us-east-1" -> null
+      - server_side_encryption        = "AES256" -> null
+      - source                        = "./../app/sim.py" -> null
+      - storage_class                 = "STANDARD" -> null
+      - tags                          = {} -> null
+      - tags_all                      = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+        # (14 unchanged attributes hidden)
+    }
+
+  # aws_security_group.sim will be destroyed
+  - resource "aws_security_group" "sim" {
+      - arn                    = "arn:aws:ec2:us-east-1:<account-id>:security-group/sg-0ff3a6ba1f1f594c8" -> null
+      - description            = "Fleet simulator - no inbound, SSM only" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "Outbound: packages, SSM, Kinesis, S3"
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-0ff3a6ba1f1f594c8" -> null
+      - ingress                = [] -> null
+      - name                   = "mvela-fleet-sim-sg" -> null
+      - owner_id               = "<account-id>" -> null
+      - region                 = "us-east-1" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name" = "mvela-fleet-sim-sg"
+        } -> null
+      - tags_all               = {
+          - "ManagedBy" = "terraform"
+          - "Name"      = "mvela-fleet-sim-sg"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - vpc_id                 = "vpc-0e26080e2ec8262ff" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # aws_subnet.public_a will be destroyed
+  - resource "aws_subnet" "public_a" {
+      - arn                                            = "arn:aws:ec2:us-east-1:<account-id>:subnet/subnet-02d83ebba430906b6" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1a" -> null
+      - availability_zone_id                           = "use1-az1" -> null
+      - cidr_block                                     = "10.130.1.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-02d83ebba430906b6" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "<account-id>" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - region                                         = "us-east-1" -> null
+      - tags                                           = {
+          - "Name" = "mvela-lake-public-a"
+        } -> null
+      - tags_all                                       = {
+          - "ManagedBy" = "terraform"
+          - "Name"      = "mvela-lake-public-a"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - vpc_id                                         = "vpc-0e26080e2ec8262ff" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # aws_vpc.lab will be destroyed
+  - resource "aws_vpc" "lab" {
+      - arn                                  = "arn:aws:ec2:us-east-1:<account-id>:vpc/vpc-0e26080e2ec8262ff" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "10.130.0.0/16" -> null
+      - default_network_acl_id               = "acl-0d712f3a933dd4159" -> null
+      - default_route_table_id               = "rtb-07caa6400d59f2797" -> null
+      - default_security_group_id            = "sg-05f5ab124a49cd69f" -> null
+      - dhcp_options_id                      = "dopt-005c03a6fb6933432" -> null
+      - enable_dns_hostnames                 = false -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-0e26080e2ec8262ff" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-07caa6400d59f2797" -> null
+      - owner_id                             = "<account-id>" -> null
+      - region                               = "us-east-1" -> null
+      - tags                                 = {
+          - "Name" = "mvela-lake-vpc"
+        } -> null
+      - tags_all                             = {
+          - "ManagedBy" = "terraform"
+          - "Name"      = "mvela-lake-vpc"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # aws_vpc_endpoint.s3 will be destroyed
+  - resource "aws_vpc_endpoint" "s3" {
+      - arn                        = "arn:aws:ec2:us-east-1:<account-id>:vpc-endpoint/vpce-0266a7d92c389c19f" -> null
+      - cidr_blocks                = [
+          - "16.15.160.0/19",
+          - "16.182.0.0/16",
+          - "18.34.0.0/19",
+          - "52.216.0.0/15",
+          - "54.231.0.0/16",
+          - "3.5.0.0/19",
+          - "18.34.232.0/21",
+          - "16.15.192.0/18",
+          - "16.15.156.0/22",
+        ] -> null
+      - dns_entry                  = [] -> null
+      - id                         = "vpce-0266a7d92c389c19f" -> null
+      - ip_address_type            = "ipv4" -> null
+      - network_interface_ids      = [] -> null
+      - owner_id                   = "<account-id>" -> null
+      - policy                     = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "*"
+                      - Effect    = "Allow"
+                      - Principal = "*"
+                      - Resource  = "*"
+                    },
+                ]
+              - Version   = "2008-10-17"
+            }
+        ) -> null
+      - prefix_list_id             = "pl-63a5400a" -> null
+      - private_dns_enabled        = false -> null
+      - region                     = "us-east-1" -> null
+      - requester_managed          = false -> null
+      - route_table_ids            = [
+          - "rtb-0e4365e02fdf0dac8",
+        ] -> null
+      - security_group_ids         = [] -> null
+      - service_name               = "com.amazonaws.us-east-1.s3" -> null
+      - service_region             = "us-east-1" -> null
+      - state                      = "available" -> null
+      - subnet_ids                 = [] -> null
+      - tags                       = {
+          - "Name" = "mvela-lake-s3-endpoint"
+        } -> null
+      - tags_all                   = {
+          - "ManagedBy" = "terraform"
+          - "Name"      = "mvela-lake-s3-endpoint"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+      - vpc_endpoint_type          = "Gateway" -> null
+      - vpc_id                     = "vpc-0e26080e2ec8262ff" -> null
+        # (2 unchanged attributes hidden)
+
+      - dns_options {
+          - dns_record_ip_type                             = "service-defined" -> null
+          - private_dns_only_for_inbound_resolver_endpoint = false -> null
+          - private_dns_specified_domains                  = [] -> null
+            # (1 unchanged attribute hidden)
+        }
+    }
+
+  # aws_vpc_security_group_egress_rule.sim_all will be destroyed
+  - resource "aws_vpc_security_group_egress_rule" "sim_all" {
+      - arn                    = "arn:aws:ec2:us-east-1:<account-id>:security-group-rule/sgr-0332bf12476cb5d96" -> null
+      - cidr_ipv4              = "0.0.0.0/0" -> null
+      - description            = "Outbound: packages, SSM, Kinesis, S3" -> null
+      - id                     = "sgr-0332bf12476cb5d96" -> null
+      - ip_protocol            = "-1" -> null
+      - region                 = "us-east-1" -> null
+      - security_group_id      = "sg-0ff3a6ba1f1f594c8" -> null
+      - security_group_rule_id = "sgr-0332bf12476cb5d96" -> null
+      - tags_all               = {
+          - "ManagedBy" = "terraform"
+          - "Project"   = "aws-streaming-analytics-lake"
+        } -> null
+    }
+
+Plan: 0 to add, 0 to change, 62 to destroy.
+
+Changes to Outputs:
+  - alerts_consumer     = "efo: arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings/consumer/mvela-speed-alerts-efo:1791525028" -> null
+  - alerts_function     = "mvela-speed-alerts" -> null
+  - alerts_mapping_uuid = "a0f23d66-c965-4cd9-b401-a879f09e8b93" -> null
+  - analyst_role_arn    = "arn:aws:iam::<account-id>:role/mvela-ops-analyst" -> null
+  - app_sha256          = {
+      - "backfill.py" = "4087c32fe55cf2ee0903c755fab736db4f11e0d88cc3f3871f6a8173cbf9cb9a"
+      - "common.py"   = "39eac417b3621ada6607450c09e2ec04daf037dfc17b606e5e6839576496da75"
+      - "ctl.py"      = "4e357b655c127250b13b0c489c160f08b7b39aa8312995e51b4c8d04a534399b"
+      - "fleet.py"    = "d22c53433084898e1f8295b9dea116e40fb5d9f219ee9e4c4daf5d7c9e1f5345"
+      - "sim.py"      = "4a9bb6da8750f44c7182785a96d59635893fb73debe176ee0b05ba857d9b7c1f"
+    } -> null
+  - database            = "mvela_fleet" -> null
+  - firehose_name       = "mvela-fleet-to-lake" -> null
+  - history_location    = "s3://mvela-fleet-lake-<account-id>-us-east-1/curated/fleet_history/" -> null
+  - lake_admins         = [
+      - "arn:aws:iam::<account-id>:user/Michael-admin",
+    ] -> null
+  - lake_bucket         = "mvela-fleet-lake-<account-id>-us-east-1" -> null
+  - results_bucket      = "mvela-athena-results-<account-id>-us-east-1" -> null
+  - sim_id              = "i-0e447d1221d0ad5a3" -> null
+  - stream_name         = "mvela-fleet-pings" -> null
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: 
+aws_iam_role_policy_attachment.sim_ssm: Destroying... [id=mvela-fleet-sim-role/arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore]
+aws_vpc_endpoint.s3: Destroying... [id=vpce-0266a7d92c389c19f]
+aws_cloudwatch_metric_alarm.alerts_iterator_age: Destroying... [id=mvela-alerts-iterator-age]
+aws_s3_bucket_lifecycle_configuration.lake: Destroying... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_s3_bucket_server_side_encryption_configuration.all["results"]: Destroying... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_s3_bucket_policy.tls_only["code"]: Destroying... [id=mvela-lake-code-<account-id>-us-east-1]
+aws_lakeformation_permissions.analyst_history[0]: Destroying... [id=910452064]
+aws_athena_workgroup.engineering: Destroying... [id=mvela-engineering]
+aws_glue_catalog_table.raw_json: Destroying... [id=<account-id>:mvela_fleet:raw_pings_json]
+aws_instance.sim: Destroying... [id=i-0e447d1221d0ad5a3]
+aws_s3_bucket_server_side_encryption_configuration.all["results"]: Destruction complete after 1s
+aws_lakeformation_resource.curated: Destroying... [id=arn:aws:s3:::mvela-fleet-lake-<account-id>-us-east-1/curated]
+aws_glue_catalog_table.raw_json: Destruction complete after 2s
+aws_s3_bucket_policy.tls_only["results"]: Destroying... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_athena_workgroup.engineering: Destruction complete after 2s
+aws_lakeformation_permissions.analyst_live: Destroying... [id=1190064233]
+aws_iam_role_policy_attachment.sim_ssm: Destruction complete after 2s
+aws_s3_bucket_server_side_encryption_configuration.all["lake"]: Destroying... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_s3_bucket_lifecycle_configuration.lake: Destruction complete after 2s
+aws_s3_bucket_policy.tls_only["lake"]: Destroying... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_s3_bucket_policy.tls_only["code"]: Destruction complete after 2s
+aws_cloudwatch_metric_alarm.lake_freshness: Destroying... [id=mvela-lake-freshness]
+aws_cloudwatch_metric_alarm.alerts_iterator_age: Destruction complete after 2s
+aws_athena_workgroup.migration: Destroying... [id=mvela-migration]
+aws_lakeformation_resource.curated: Destruction complete after 1s
+aws_iam_role_policy.analyst: Destroying... [id=mvela-ops-analyst:athena-analysts-workgroup]
+aws_lakeformation_permissions.analyst_history[0]: Destruction complete after 2s
+aws_lambda_event_source_mapping.alerts: Destroying... [id=a0f23d66-c965-4cd9-b401-a879f09e8b93]
+aws_s3_bucket_server_side_encryption_configuration.all["lake"]: Destruction complete after 0s
+aws_s3_bucket_server_side_encryption_configuration.all["code"]: Destroying... [id=mvela-lake-code-<account-id>-us-east-1]
+aws_cloudwatch_metric_alarm.lake_freshness: Destruction complete after 0s
+aws_s3_bucket_lifecycle_configuration.results: Destroying... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_athena_workgroup.migration: Destruction complete after 0s
+aws_iam_role_policy.lf_registration: Destroying... [id=mvela-lf-registration-role:read-write-curated]
+aws_iam_role_policy.analyst: Destruction complete after 0s
+aws_kinesis_firehose_delivery_stream.lake: Destroying... [id=arn:aws:firehose:us-east-1:<account-id>:deliverystream/mvela-fleet-to-lake]
+aws_s3_bucket_policy.tls_only["results"]: Destruction complete after 0s
+aws_athena_workgroup.analysts: Destroying... [id=mvela-analysts]
+aws_s3_bucket_server_side_encryption_configuration.all["code"]: Destruction complete after 0s
+aws_iam_role_policy.lf_registration: Destruction complete after 1s
+aws_iam_role.lf_registration: Destroying... [id=mvela-lf-registration-role]
+aws_lakeformation_permissions.analyst_live: Destruction complete after 1s
+aws_iam_role.analyst: Destroying... [id=mvela-ops-analyst]
+aws_s3_bucket_policy.tls_only["lake"]: Destruction complete after 1s
+aws_s3_bucket_public_access_block.all["code"]: Destroying... [id=mvela-lake-code-<account-id>-us-east-1]
+aws_s3_bucket_public_access_block.all["results"]: Destroying... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_athena_workgroup.analysts: Destruction complete after 1s
+aws_s3_bucket_public_access_block.all["lake"]: Destroying... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_s3_bucket_lifecycle_configuration.results: Destruction complete after 1s
+aws_s3_bucket_public_access_block.all["code"]: Destruction complete after 0s
+aws_s3_bucket_public_access_block.all["results"]: Destruction complete after 0s
+aws_s3_bucket_public_access_block.all["lake"]: Destruction complete after 0s
+aws_s3_bucket.results: Destroying... [id=mvela-athena-results-<account-id>-us-east-1]
+aws_lambda_event_source_mapping.alerts: Destruction complete after 2s
+aws_kinesis_stream_consumer.alerts[0]: Destroying... [id=arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings/consumer/mvela-speed-alerts-efo:1791525028]
+aws_lambda_function.alerts: Destroying... [id=mvela-speed-alerts]
+aws_iam_role.lf_registration: Destruction complete after 1s
+aws_iam_role.analyst: Destruction complete after 1s
+aws_s3_bucket.results: Destruction complete after 4s
+aws_kinesis_stream_consumer.alerts[0]: Destruction complete after 5s
+aws_lambda_function.alerts: Destruction complete after 5s
+aws_cloudwatch_log_group.alerts: Destroying... [id=/aws/lambda/mvela-speed-alerts]
+aws_iam_role_policy_attachment.alerts_logs: Destroying... [id=mvela-speed-alerts-role/arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole]
+aws_iam_role_policy.alerts: Destroying... [id=mvela-speed-alerts-role:read-the-stream]
+aws_iam_role_policy.alerts: Destruction complete after 1s
+aws_iam_role_policy_attachment.alerts_logs: Destruction complete after 1s
+aws_iam_role.alerts: Destroying... [id=mvela-speed-alerts-role]
+aws_vpc_endpoint.s3: Still destroying... [id=vpce-0266a7d92c389c19f, 00m10s elapsed]
+aws_instance.sim: Still destroying... [id=i-0e447d1221d0ad5a3, 00m10s elapsed]
+aws_cloudwatch_log_group.alerts: Destruction complete after 2s
+aws_iam_role.alerts: Destruction complete after 1s
+aws_kinesis_firehose_delivery_stream.lake: Still destroying... [id=arn:aws:firehose:us-east-1:<account-id>:deliverystream/mvela-fleet-to-lake, 00m10s elapsed]
+aws_vpc_endpoint.s3: Destruction complete after 13s
+aws_instance.sim: Still destroying... [id=i-0e447d1221d0ad5a3, 00m20s elapsed]
+aws_instance.sim: Destruction complete after 22s
+aws_kinesis_firehose_delivery_stream.lake: Still destroying... [id=arn:aws:firehose:us-east-1:<account-id>:deliverystream/mvela-fleet-to-lake, 00m20s elapsed]
+aws_iam_instance_profile.sim: Destroying... [id=mvela-fleet-sim-profile]
+aws_route_table_association.public_a: Destroying... [id=rtbassoc-0be9fef867b294b41]
+aws_iam_role_policy.sim: Destroying... [id=mvela-fleet-sim-role:stream-history-code]
+aws_vpc_security_group_egress_rule.sim_all: Destroying... [id=sgr-0332bf12476cb5d96]
+aws_s3_object.app["fleet.py"]: Destroying... [id=mvela-lake-code-<account-id>-us-east-1/app/fleet.py]
+aws_s3_object.app["common.py"]: Destroying... [id=mvela-lake-code-<account-id>-us-east-1/app/common.py]
+aws_s3_object.app["sim.py"]: Destroying... [id=mvela-lake-code-<account-id>-us-east-1/app/sim.py]
+aws_s3_object.app["ctl.py"]: Destroying... [id=mvela-lake-code-<account-id>-us-east-1/app/ctl.py]
+aws_s3_object.app["backfill.py"]: Destroying... [id=mvela-lake-code-<account-id>-us-east-1/app/backfill.py]
+aws_iam_role_policy.sim: Destruction complete after 0s
+aws_route.internet: Destroying... [id=r-rtb-0e4365e02fdf0dac81080289494]
+aws_iam_instance_profile.sim: Destruction complete after 1s
+aws_iam_role.sim: Destroying... [id=mvela-fleet-sim-role]
+aws_s3_object.app["sim.py"]: Destruction complete after 1s
+aws_s3_object.app["fleet.py"]: Destruction complete after 1s
+aws_s3_object.app["ctl.py"]: Destruction complete after 1s
+aws_s3_object.app["backfill.py"]: Destruction complete after 1s
+aws_s3_object.app["common.py"]: Destruction complete after 1s
+aws_s3_bucket.code: Destroying... [id=mvela-lake-code-<account-id>-us-east-1]
+aws_vpc_security_group_egress_rule.sim_all: Destruction complete after 1s
+aws_security_group.sim: Destroying... [id=sg-0ff3a6ba1f1f594c8]
+aws_route_table_association.public_a: Destruction complete after 1s
+aws_subnet.public_a: Destroying... [id=subnet-02d83ebba430906b6]
+aws_s3_bucket.code: Destruction complete after 1s
+aws_iam_role.sim: Destruction complete after 1s
+aws_route.internet: Destruction complete after 2s
+aws_internet_gateway.lab: Destroying... [id=igw-0dab094d0458c7c6d]
+aws_route_table.public: Destroying... [id=rtb-0e4365e02fdf0dac8]
+aws_subnet.public_a: Destruction complete after 1s
+aws_security_group.sim: Destruction complete after 2s
+aws_internet_gateway.lab: Destruction complete after 1s
+aws_route_table.public: Destruction complete after 2s
+aws_vpc.lab: Destroying... [id=vpc-0e26080e2ec8262ff]
+aws_vpc.lab: Destruction complete after 1s
+aws_kinesis_firehose_delivery_stream.lake: Still destroying... [id=arn:aws:firehose:us-east-1:<account-id>:deliverystream/mvela-fleet-to-lake, 00m30s elapsed]
+aws_kinesis_firehose_delivery_stream.lake: Still destroying... [id=arn:aws:firehose:us-east-1:<account-id>:deliverystream/mvela-fleet-to-lake, 00m40s elapsed]
+aws_kinesis_firehose_delivery_stream.lake: Still destroying... [id=arn:aws:firehose:us-east-1:<account-id>:deliverystream/mvela-fleet-to-lake, 00m50s elapsed]
+aws_kinesis_firehose_delivery_stream.lake: Destruction complete after 51s
+aws_cloudwatch_log_stream.firehose_s3: Destroying... [id=DestinationDelivery]
+aws_iam_role_policy.firehose: Destroying... [id=mvela-firehose-role:stream-to-lake]
+aws_lakeformation_permissions.firehose_live: Destroying... [id=437827887]
+aws_iam_role_policy.firehose: Destruction complete after 0s
+aws_kinesis_stream.pings: Destroying... [id=arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings]
+aws_lakeformation_permissions.firehose_live: Destruction complete after 1s
+aws_iam_role.firehose: Destroying... [id=mvela-firehose-role]
+aws_glue_catalog_table.fleet_live: Destroying... [id=<account-id>:mvela_fleet:fleet_live]
+aws_cloudwatch_log_stream.firehose_s3: Destruction complete after 1s
+aws_cloudwatch_log_group.firehose: Destroying... [id=/aws/kinesisfirehose/mvela-fleet-to-lake]
+aws_glue_catalog_table.fleet_live: Destruction complete after 0s
+aws_glue_catalog_database.fleet: Destroying... [id=<account-id>:mvela_fleet]
+aws_cloudwatch_log_group.firehose: Destruction complete after 0s
+aws_s3_bucket.lake: Destroying... [id=mvela-fleet-lake-<account-id>-us-east-1]
+aws_iam_role.firehose: Destruction complete after 1s
+aws_glue_catalog_database.fleet: Destruction complete after 1s
+aws_s3_bucket.lake: Destruction complete after 7s
+aws_kinesis_stream.pings: Still destroying... [id=arn:aws:kinesis:us-east-1:<account-id>:stream/mvela-fleet-pings, 00m10s elapsed]
+aws_kinesis_stream.pings: Destruction complete after 13s
+Releasing state lock. This may take a few moments...
+
+Destroy complete! Resources: 62 destroyed.

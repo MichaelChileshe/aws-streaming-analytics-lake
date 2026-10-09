@@ -1,0 +1,23 @@
+{
+ "label": "q1-parquet",
+ "workgroup": "mvela-engineering",
+ "query_id": "c94d4bc4-ce40-4cbd-8f32-566f0b41a0e2",
+ "state": "SUCCEEDED",
+ "reason": "",
+ "data_scanned_bytes": 25117150,
+ "data_scanned": "23.95 MB",
+ "engine_ms": 1298,
+ "total_ms": 1423,
+ "statement_type": "DML",
+ "cost_usd": 0.000114,
+ "wall_seconds": 7.9,
+ "header": [
+  "truck_id",
+  "pings",
+  "max_kmh",
+  "avg_kmh",
+  "seconds_over_80"
+ ],
+ "row_count": 300,
+ "sql": "SELECT truck_id,\n       count(*)                     AS pings,\n       max(speed_kmh)               AS max_kmh,\n       round(avg(speed_kmh), 1)     AS avg_kmh,\n       count_if(speed_kmh > 80) * 5 AS seconds_over_80\nFROM mvela_fleet.fleet_history\nWHERE dt = '2026-10-07'\n  AND event_ms >= 1791331200000 AND event_ms < 1791417600000\nGROUP BY truck_id\nORDER BY truck_id"
+}

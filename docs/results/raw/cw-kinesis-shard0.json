@@ -1,0 +1,18 @@
+{
+ "namespace": "AWS/Kinesis",
+ "dimensions": {
+  "StreamName": "mvela-fleet-pings",
+  "ShardId": "shardId-000000000000"
+ },
+ "start_utc": "2026-10-09T05:32:00+00:00",
+ "end_utc": "2026-10-09T05:37:00+00:00",
+ "period_s": 300,
+ "metrics": {
+  "IncomingRecords": [
+   {
+    "utc": "05:32",
+    "Sum": 8493.0
+   }
+  ]
+ }
+}

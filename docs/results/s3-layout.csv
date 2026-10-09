@@ -1,0 +1,6 @@
+label,prefix,objects,total_bytes,total,avg_bytes,min_bytes,max_bytes
+raw-json,raw/json/,168,7717117543,7.19 GB,45935223,45916841,45954720
+history,curated/fleet_history/,210,481163795,458.87 MB,2291256,936614,3629281
+live,curated/fleet_live/,18,896298,875.29 KB,49794,47545,51761
+live-final,curated/fleet_live/,230,11307886,10.78 MB,49165,42115,51761
+firehose-errors,errors/,0,0,0 B,0,0,0

@@ -1,0 +1,3 @@
+consumer,window_min,pings_read,batches,speeding_pings,alerts,trucks_alerted,alerts_BFN,alerts_JHB,alerts_PLK,alerts_PTA,log_p50_ms,log_p95_ms,log_max_ms,cw_p50_ms,cw_p95_ms,cw_p99_ms,cw_max_ms,cw_samples,driver_fields_in_alerts
+polling,10,35827,1194,2665,190,83,27,54,47,62,763,799,887,763.14,853.0,866.48,894.0,34474,0
+efo,8,28800,984,2339,157,69,9,54,29,65,77,128,175,79.26,127.91,180.89,228.0,26125,0

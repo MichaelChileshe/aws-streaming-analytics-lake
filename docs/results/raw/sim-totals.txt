@@ -1,0 +1,2 @@
+[i-0e447d1221d0ad5a3] Success in 5 s
+RESULT {"seconds": 6910, "sent": 414660, "per_second": 60.0, "refused_then_retried": 0, "throttled": 0, "lost": 0, "failed_calls": 0, "putrecords_calls": 6911, "putrecords_p50_ms": 19.4, "putrecords_p99_ms": 85.7}

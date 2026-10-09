@@ -1,0 +1,13 @@
+{
+ "bucket": "<lake bucket>",
+ "prefix": "curated/fleet_live/",
+ "objects": 230,
+ "total_bytes": 11307886,
+ "total": "10.78 MB",
+ "avg_bytes": 49165,
+ "min_bytes": 42115,
+ "max_bytes": 51761,
+ "folders": [
+  "dt=2026-10-09"
+ ]
+}

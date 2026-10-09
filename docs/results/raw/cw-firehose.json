@@ -1,0 +1,121 @@
+{
+ "namespace": "AWS/Firehose",
+ "dimensions": {
+  "DeliveryStreamName": "mvela-fleet-to-lake"
+ },
+ "start_utc": "2026-10-09T05:32:00+00:00",
+ "end_utc": "2026-10-09T05:38:00+00:00",
+ "period_s": 60,
+ "metrics": {
+  "DataReadFromKinesisStream.Records": [
+   {
+    "utc": "05:32",
+    "Sum": 3600.0
+   },
+   {
+    "utc": "05:33",
+    "Sum": 3600.0
+   },
+   {
+    "utc": "05:34",
+    "Sum": 3568.0
+   },
+   {
+    "utc": "05:35",
+    "Sum": 3632.0
+   },
+   {
+    "utc": "05:36",
+    "Sum": 3572.0
+   }
+  ],
+  "SucceedConversion.Records": [
+   {
+    "utc": "05:32",
+    "Sum": 3600.0
+   },
+   {
+    "utc": "05:33",
+    "Sum": 3567.0
+   },
+   {
+    "utc": "05:34",
+    "Sum": 3664.0
+   },
+   {
+    "utc": "05:35",
+    "Sum": 3602.0
+   },
+   {
+    "utc": "05:36",
+    "Sum": 3597.0
+   }
+  ],
+  "FailedConversion.Records": [
+   {
+    "utc": "05:32",
+    "Sum": 0.0
+   },
+   {
+    "utc": "05:33",
+    "Sum": 0.0
+   },
+   {
+    "utc": "05:34",
+    "Sum": 0.0
+   },
+   {
+    "utc": "05:35",
+    "Sum": 0.0
+   },
+   {
+    "utc": "05:36",
+    "Sum": 0.0
+   }
+  ],
+  "DeliveryToS3.Records": [
+   {
+    "utc": "05:32",
+    "Sum": 3600.0
+   },
+   {
+    "utc": "05:33",
+    "Sum": 3567.0
+   },
+   {
+    "utc": "05:34",
+    "Sum": 3664.0
+   },
+   {
+    "utc": "05:35",
+    "Sum": 3602.0
+   },
+   {
+    "utc": "05:36",
+    "Sum": 3597.0
+   }
+  ],
+  "DeliveryToS3.DataFreshness": [
+   {
+    "utc": "05:32",
+    "Maximum": 71.0
+   },
+   {
+    "utc": "05:33",
+    "Maximum": 74.0
+   },
+   {
+    "utc": "05:34",
+    "Maximum": 71.0
+   },
+   {
+    "utc": "05:35",
+    "Maximum": 73.0
+   },
+   {
+    "utc": "05:36",
+    "Maximum": 70.0
+   }
+  ]
+ }
+}

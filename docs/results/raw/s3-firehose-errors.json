@@ -1,0 +1,11 @@
+{
+ "bucket": "<lake bucket>",
+ "prefix": "errors/",
+ "objects": 0,
+ "total_bytes": 0,
+ "total": "0 B",
+ "avg_bytes": 0,
+ "min_bytes": 0,
+ "max_bytes": 0,
+ "folders": []
+}

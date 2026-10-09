@@ -1,0 +1,89 @@
+{
+ "namespace": "AWS/Kinesis",
+ "dimensions": {
+  "StreamName": "mvela-fleet-pings"
+ },
+ "start_utc": "2026-10-09T05:31:00+00:00",
+ "end_utc": "2026-10-09T05:37:00+00:00",
+ "period_s": 60,
+ "metrics": {
+  "IncomingRecords": [
+   {
+    "utc": "05:31",
+    "Sum": 3600.0
+   },
+   {
+    "utc": "05:32",
+    "Sum": 3600.0
+   },
+   {
+    "utc": "05:33",
+    "Sum": 3600.0
+   },
+   {
+    "utc": "05:34",
+    "Sum": 3600.0
+   },
+   {
+    "utc": "05:35",
+    "Sum": 3600.0
+   },
+   {
+    "utc": "05:36",
+    "Sum": 1200.0
+   }
+  ],
+  "WriteProvisionedThroughputExceeded": [
+   {
+    "utc": "05:31",
+    "Sum": 0.0
+   },
+   {
+    "utc": "05:32",
+    "Sum": 0.0
+   },
+   {
+    "utc": "05:33",
+    "Sum": 0.0
+   },
+   {
+    "utc": "05:34",
+    "Sum": 0.0
+   },
+   {
+    "utc": "05:35",
+    "Sum": 0.0
+   },
+   {
+    "utc": "05:36",
+    "Sum": 0.0
+   }
+  ],
+  "PutRecords.Latency": [
+   {
+    "utc": "05:31",
+    "Average": 13.966666666666667
+   },
+   {
+    "utc": "05:32",
+    "Average": 15.266666666666667
+   },
+   {
+    "utc": "05:33",
+    "Average": 14.2
+   },
+   {
+    "utc": "05:34",
+    "Average": 14.083333333333334
+   },
+   {
+    "utc": "05:35",
+    "Average": 13.583333333333334
+   },
+   {
+    "utc": "05:36",
+    "Average": 14.0
+   }
+  ]
+ }
+}

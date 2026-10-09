@@ -1,0 +1,21 @@
+{
+ "label": "lf-0-engineer-pii",
+ "workgroup": "mvela-engineering",
+ "query_id": "545bd139-19c1-4ad3-a19f-c98c8b3a723a",
+ "state": "SUCCEEDED",
+ "reason": "",
+ "data_scanned_bytes": 5445,
+ "data_scanned": "5.32 KB",
+ "engine_ms": 825,
+ "total_ms": 969,
+ "statement_type": "DML",
+ "cost_usd": 4.8e-05,
+ "wall_seconds": 4.8,
+ "header": [
+  "truck_id",
+  "driver_id",
+  "driver_phone"
+ ],
+ "row_count": 3,
+ "sql": "SELECT truck_id, driver_id, driver_phone FROM mvela_fleet.fleet_live WHERE dt = '2026-10-09' LIMIT 3"
+}

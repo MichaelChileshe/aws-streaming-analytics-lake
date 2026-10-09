@@ -1,0 +1,45 @@
+{
+ "minutes": 10,
+ "alerts": 190,
+ "by_depot": {
+  "BFN": 27,
+  "JHB": 54,
+  "PLK": 47,
+  "PTA": 62
+ },
+ "top_trucks": [
+  [
+   "MV-0171",
+   4
+  ],
+  [
+   "MV-0230",
+   4
+  ],
+  [
+   "MV-0141",
+   4
+  ],
+  [
+   "MV-0226",
+   4
+  ],
+  [
+   "MV-0253",
+   4
+  ]
+ ],
+ "trucks_alerted": 83,
+ "alert_ms_after_ping": {
+  "p50": 763,
+  "p95": 799,
+  "max": 887
+ },
+ "batches": 1194,
+ "pings_read": 35827,
+ "speeding_pings": 2665,
+ "consumer_modes": {
+  "polling": 1194
+ },
+ "personal_fields_in_alerts": []
+}

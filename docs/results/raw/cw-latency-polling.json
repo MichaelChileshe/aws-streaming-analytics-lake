@@ -1,0 +1,21 @@
+{
+ "namespace": "Mvelaphanda/Fleet",
+ "dimensions": {
+  "Consumer": "polling"
+ },
+ "start_utc": "2026-10-09T05:38:00+00:00",
+ "end_utc": "2026-10-09T05:48:00+00:00",
+ "period_s": 600,
+ "metrics": {
+  "PingToAlertLatency": [
+   {
+    "utc": "05:38",
+    "p50": 763.1423892435222,
+    "p95": 852.9982683241577,
+    "p99": 866.4752989165825,
+    "Maximum": 894.0,
+    "SampleCount": 34474.0
+   }
+  ]
+ }
+}

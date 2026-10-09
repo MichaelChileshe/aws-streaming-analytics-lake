@@ -1,0 +1,64 @@
+{
+ "day": "2026-10-09",
+ "analyst_role": "mvela-ops-analyst",
+ "checks": [
+  {
+   "n": 0,
+   "check": "engineer reads driver columns",
+   "expected": "works",
+   "pass": true,
+   "detail": "SUCCEEDED, columns ['truck_id', 'driver_id', 'driver_phone']"
+  },
+  {
+   "n": 1,
+   "check": "analyst depot summary",
+   "expected": "works",
+   "pass": true,
+   "detail": "SUCCEEDED, 4 rows, scanned 879.68 KB"
+  },
+  {
+   "n": 2,
+   "check": "analyst asks for driver_phone",
+   "expected": "refused (column hidden)",
+   "pass": true,
+   "detail": "FAILED: COLUMN_NOT_FOUND: Column 'driver_phone' cannot be resolved or requester is not authorized to access requested resources"
+  },
+  {
+   "n": 3,
+   "check": "analyst SELECT * hides driver columns",
+   "expected": "10 columns, no driver_*",
+   "pass": true,
+   "detail": "SUCCEEDED, 10 columns returned ['truck_id', 'depot', 'event_ms', 'lat', 'lon', 'speed_kmh', 'heading', 'engine_on', 'fuel_pct', 'dt'] "
+  },
+  {
+   "n": 4,
+   "check": "analyst reads fleet_history",
+   "expected": "works",
+   "pass": true,
+   "detail": "SUCCEEDED, 7 days, scanned 0 B "
+  },
+  {
+   "n": 5,
+   "check": "analyst reads raw_pings_json",
+   "expected": "refused (no LF grant)",
+   "pass": true,
+   "detail": "FAILED: TABLE_NOT_FOUND: line 1:22: Table 'awsdatacatalog.mvela_fleet.raw_pings_json' does not exist"
+  },
+  {
+   "n": 6,
+   "check": "analyst uses mvela-engineering",
+   "expected": "refused by IAM",
+   "pass": true,
+   "detail": "NOT_STARTED: aws: [ERROR]: An error occurred (AccessDeniedException) when calling the StartQueryExecution operation: You are not authorized to perform: athena:StartQueryExecution on the resource. After your AWS administrator or you have updated your permissions, please try again."
+  },
+  {
+   "n": 7,
+   "check": "analyst lists the lake in S3",
+   "expected": "AccessDenied",
+   "pass": true,
+   "detail": "aws: [ERROR]: An error occurred (AccessDenied) when calling the ListObjectsV2 operation: User: arn:aws:sts::<account-id>:assumed-role/mvela-ops-analyst/mvela-analyst-check is not authorized to perform: s3:ListBucket on resource: \"arn:aws:s3:::<lake bucket>\" because no identity-based policy allows th"
+  }
+ ],
+ "passed": 8,
+ "total": 8
+}

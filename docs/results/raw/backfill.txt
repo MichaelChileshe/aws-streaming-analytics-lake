@@ -1,0 +1,10 @@
+[i-0e447d1221d0ad5a3] Success in 113 s
+generating 7 day(s) 2026-10-02 .. 2026-10-08 -> s3://mvela-fleet-lake-<account-id>-us-east-1/raw/json/
+  2026-10-02: 5,184,000 pings, 1,102.4 MB in 24 hourly files (29 s)
+  2026-10-03: 5,184,000 pings, 1,102.6 MB in 24 hourly files (30 s)
+  2026-10-04: 5,184,000 pings, 1,102.4 MB in 24 hourly files (27 s)
+  2026-10-05: 5,184,000 pings, 1,102.4 MB in 24 hourly files (27 s)
+  2026-10-06: 5,184,000 pings, 1,102.4 MB in 24 hourly files (45 s)
+  2026-10-07: 5,184,000 pings, 1,102.4 MB in 24 hourly files (27 s)
+  2026-10-08: 5,184,000 pings, 1,102.5 MB in 24 hourly files (24 s)
+RESULT backfill: 36,288,000 pings, 7.72 GB of JSON, 168 files, 108 s (334,963 pings/s)

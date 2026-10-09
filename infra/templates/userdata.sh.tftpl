@@ -1,0 +1,53 @@
+#!/bin/bash
+# Boot script for mvela-fleet-sim (rendered by Terraform): Python 3.12 + boto3, the tool code
+# from S3, the tool commands, and a systemd unit for the live fleet.
+set -euxo pipefail
+mkdir -p /opt/mvela-lake
+# Amazon Linux 2023's default python3 is 3.9, which current boto3 releases no longer support.
+if dnf install -y python3.12 python3.12-pip; then PY=python3.12; else dnf install -y python3-pip; PY=python3; fi
+$PY -m venv /opt/mvela-lake/venv
+/opt/mvela-lake/venv/bin/pip install --quiet --upgrade pip
+/opt/mvela-lake/venv/bin/pip install --quiet --upgrade boto3
+
+cat > /etc/mvela-lake.conf <<'CONF'
+REGION=${region}
+STREAM=${stream}
+LAKE_BUCKET=${lake_bucket}
+RAW_PREFIX=${raw_prefix}
+CONF
+chmod 644 /etc/mvela-lake.conf
+
+# mvela-sync: copy the tool code from S3 and print each file's SHA-256 (compare with terraform output app_sha256).
+cat > /usr/local/bin/mvela-sync <<'SYNC'
+#!/bin/bash
+set -euo pipefail
+aws s3 cp --recursive --only-show-errors --region ${region} s3://${code_bucket}/app/ /opt/mvela-lake/
+cd /opt/mvela-lake && sha256sum -- *.py
+SYNC
+chmod 755 /usr/local/bin/mvela-sync
+# The instance role can take a few seconds to be usable after launch: retry for up to 5 minutes.
+for i in $(seq 1 20); do /usr/local/bin/mvela-sync && break; echo "code not reachable yet (attempt $i), retrying in 15 s"; sleep 15; done
+test -f /opt/mvela-lake/sim.py
+
+printf '#!/bin/bash\ncd /opt/mvela-lake && exec /opt/mvela-lake/venv/bin/python -u /opt/mvela-lake/sim.py "$@"\n' > /usr/local/bin/fleet-sim
+printf '#!/bin/bash\ncd /opt/mvela-lake && exec /opt/mvela-lake/venv/bin/python -u /opt/mvela-lake/backfill.py "$@"\n' > /usr/local/bin/fleet-backfill
+printf '#!/bin/bash\ncd /opt/mvela-lake && exec /opt/mvela-lake/venv/bin/python -u /opt/mvela-lake/ctl.py "$@"\n' > /usr/local/bin/fleet-ctl
+chmod 755 /usr/local/bin/fleet-sim /usr/local/bin/fleet-backfill /usr/local/bin/fleet-ctl
+
+# The live fleet runs as a service: systemctl start / stop fleet-sim, output in journalctl -u fleet-sim.
+cat > /etc/systemd/system/fleet-sim.service <<'UNIT'
+[Unit]
+Description=Mvelaphanda live fleet: 300 trucks pinging the Kinesis stream every 5 seconds
+After=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/fleet-sim
+Restart=on-failure
+RestartSec=5
+KillSignal=SIGTERM
+TimeoutStopSec=30
+UNIT
+systemctl daemon-reload
+
+/opt/mvela-lake/venv/bin/python -c "import sys, boto3; print('python packages ok: python', sys.version.split()[0], 'boto3', boto3.__version__)"
+echo "mvela-fleet-sim ready"

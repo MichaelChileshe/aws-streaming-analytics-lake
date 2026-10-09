@@ -1,0 +1,20 @@
+{
+ "label": "lf-4-analyst-history",
+ "workgroup": "mvela-analysts",
+ "query_id": "b90e9e31-e269-4326-8fb5-02728d856e70",
+ "state": "SUCCEEDED",
+ "reason": "",
+ "data_scanned_bytes": 0,
+ "data_scanned": "0 B",
+ "engine_ms": 1769,
+ "total_ms": 1973,
+ "statement_type": "DML",
+ "cost_usd": 4.8e-05,
+ "wall_seconds": 6.6,
+ "header": [
+  "dt",
+  "pings"
+ ],
+ "row_count": 7,
+ "sql": "SELECT dt, count(*) AS pings FROM mvela_fleet.fleet_history GROUP BY dt ORDER BY dt"
+}

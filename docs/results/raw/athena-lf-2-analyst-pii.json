@@ -1,0 +1,17 @@
+{
+ "label": "lf-2-analyst-pii",
+ "workgroup": "mvela-analysts",
+ "query_id": "021b50b0-2287-4db9-bbed-b8d4be89d089",
+ "state": "FAILED",
+ "reason": "COLUMN_NOT_FOUND: Column 'driver_phone' cannot be resolved or requester is not authorized to access requested resources",
+ "data_scanned_bytes": 0,
+ "data_scanned": "0 B",
+ "engine_ms": 164,
+ "total_ms": 380,
+ "statement_type": "DML",
+ "cost_usd": 0.0,
+ "wall_seconds": 4.0,
+ "header": [],
+ "row_count": 0,
+ "sql": "SELECT truck_id, driver_phone FROM mvela_fleet.fleet_live WHERE dt = '2026-10-09' LIMIT 3"
+}

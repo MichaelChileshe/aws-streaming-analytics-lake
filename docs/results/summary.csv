@@ -1,0 +1,57 @@
+section,item,value
+Athena,"Q1 day summary, raw JSON: scanned",7.19 GB
+Athena,"Q1 day summary, raw JSON: bytes",7717247824
+Athena,"Q1 day summary, raw JSON: engine ms",1665
+Athena,"Q1 day summary, raw JSON: cost US$",0.035094
+Athena,"Q1, Parquet, no dt filter: scanned",23.95 MB
+Athena,"Q1, Parquet, no dt filter: bytes",25117150
+Athena,"Q1, Parquet, no dt filter: engine ms",2072
+Athena,"Q1, Parquet, no dt filter: cost US$",0.000114
+Athena,"Q1, Parquet + dt filter: scanned",23.95 MB
+Athena,"Q1, Parquet + dt filter: bytes",25117150
+Athena,"Q1, Parquet + dt filter: engine ms",1298
+Athena,"Q1, Parquet + dt filter: cost US$",0.000114
+Athena,"Q2 one truck 15 min, raw JSON: scanned",7.19 GB
+Athena,"Q2 one truck 15 min, raw JSON: bytes",7717199675
+Athena,"Q2 one truck 15 min, raw JSON: engine ms",2660
+Athena,"Q2 one truck 15 min, raw JSON: cost US$",0.035094
+Athena,"Q2, Parquet + dt filter: scanned",40.41 MB
+Athena,"Q2, Parquet + dt filter: bytes",42371165
+Athena,"Q2, Parquet + dt filter: engine ms",1163
+Athena,"Q2, Parquet + dt filter: cost US$",0.000193
+Athena,CTAS migration JSON->Parquet: scanned,7.19 GB
+Athena,CTAS migration JSON->Parquet: bytes,7717247824
+Athena,CTAS migration JSON->Parquet: engine ms,9646
+Athena,CTAS migration JSON->Parquet: cost US$,0.035094
+Same answer,q1-json-vs-q1-parquet,"identical, 300 rows"
+Same answer,q1-json-vs-q1-parquet-nopart,"identical, 300 rows"
+Same answer,q2-json-vs-q2-parquet,"identical, 180 rows"
+S3,raw-json: objects / total / average,168 / 7.19 GB / 44858.6 KB
+S3,history: objects / total / average,210 / 458.87 MB / 2237.6 KB
+S3,live-final: objects / total / average,230 / 10.78 MB / 48.0 KB
+Backfill,history generated,"backfill: 36,288,000 pings, 7.72 GB of JSON, 168 files, 108 s (334,963 pings/s)"
+Stream,producer totals,"{""seconds"": 6910, ""sent"": 414660, ""per_second"": 60.0, ""refused_then_retried"": 0, ""throttled"": 0, ""lost"": 0, ""failed_calls"": 0, ""putrecords_calls"": 6911, ""putrecords_p50_ms"": 19.4, ""putrecords_p99_ms"": 85.7}"
+Alerts,polling: alerts / speeding pings / pings read,190 / 2665 / 35827
+Alerts,polling: alert raised after ping p50 / p95 ms,763 / 799
+Alerts,polling: PingToAlertLatency p50 / p95 / p99 / max ms (CloudWatch),763 / 853 / 866 / 894
+Alerts,efo: alerts / speeding pings / pings read,157 / 2339 / 28800
+Alerts,efo: alert raised after ping p50 / p95 ms,77 / 128
+Alerts,efo: PingToAlertLatency p50 / p95 / p99 / max ms (CloudWatch),79 / 128 / 181 / 228
+Lake freshness,lag min / median / max s,10.3 / 25.3 / 41.3
+Lake freshness,Firehose files today / average KB,33 / 48.4
+Replay,stream replay,"replay {""truck"": ""MV-0042"", ""from"": ""2026-10-09 06:12:58.000 UTC"", ""to"": ""2026-10-09 06:22:58.000 UTC"", ""records_read"": 37800, ""getrecords_calls"": 4, ""pings_found"": 120, ""km_driven"": 11.0, ""max_kmh"": 82.5, ""pings_over_80"": 19, ""seconds"": 3.3}"
+Replay,same window from the lake (pings),120
+Lake Formation,access checks as expected,8 of 8
+Lake Formation,0 engineer reads driver columns,"PASS: SUCCEEDED, columns ['truck_id', 'driver_id', 'driver_phone']"
+Lake Formation,1 analyst depot summary,"PASS: SUCCEEDED, 4 rows, scanned 879.68 KB"
+Lake Formation,2 analyst asks for driver_phone,PASS: FAILED: COLUMN_NOT_FOUND: Column 'driver_phone' cannot be resolved or requester is not authorized to access requested re
+Lake Formation,3 analyst SELECT * hides driver columns,"PASS: SUCCEEDED, 10 columns returned ['truck_id', 'depot', 'event_ms', 'lat', 'lon', 'speed_kmh', 'heading', 'engine_on', 'fue"
+Lake Formation,4 analyst reads fleet_history,"PASS: SUCCEEDED, 7 days, scanned 0 B "
+Lake Formation,5 analyst reads raw_pings_json,PASS: FAILED: TABLE_NOT_FOUND: line 1:22: Table 'awsdatacatalog.mvela_fleet.raw_pings_json' does not exist
+Lake Formation,6 analyst uses mvela-engineering,PASS: NOT_STARTED: aws: [ERROR]: An error occurred (AccessDeniedException) when calling the StartQueryExecution operation: You
+Lake Formation,7 analyst lists the lake in S3,PASS: aws: [ERROR]: An error occurred (AccessDenied) when calling the ListObjectsV2 operation: User: arn:aws:sts::<account-id>
+Terraform,tf-plan-base.txt,"Plan: 60 to add, 0 to change, 0 to destroy."
+Terraform,tf-plan-efo.txt,"Plan: 2 to add, 1 to change, 1 to destroy."
+Terraform,tf-plan-history.txt,"Plan: 1 to add, 0 to change, 0 to destroy."
+Terraform,tf-destroy.txt,Destroy complete! Resources: 62 destroyed.
+Lake Formation,settings after restore,lf-settings: identical to the snapshot taken before the build

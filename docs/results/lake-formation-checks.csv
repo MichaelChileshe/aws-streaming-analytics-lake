@@ -1,0 +1,9 @@
+n,check,expected,pass,detail
+0,engineer reads driver columns,works,True,"SUCCEEDED, columns ['truck_id', 'driver_id', 'driver_phone']"
+1,analyst depot summary,works,True,"SUCCEEDED, 4 rows, scanned 879.68 KB"
+2,analyst asks for driver_phone,refused (column hidden),True,FAILED: COLUMN_NOT_FOUND: Column 'driver_phone' cannot be resolved or requester is not authorized to access requested resources
+3,analyst SELECT * hides driver columns,"10 columns, no driver_*",True,"SUCCEEDED, 10 columns returned ['truck_id', 'depot', 'event_ms', 'lat', 'lon', 'speed_kmh', 'heading', 'engine_on', 'fuel_pct', 'dt'] "
+4,analyst reads fleet_history,works,True,"SUCCEEDED, 7 days, scanned 0 B "
+5,analyst reads raw_pings_json,refused (no LF grant),True,FAILED: TABLE_NOT_FOUND: line 1:22: Table 'awsdatacatalog.mvela_fleet.raw_pings_json' does not exist
+6,analyst uses mvela-engineering,refused by IAM,True,"NOT_STARTED: aws: [ERROR]: An error occurred (AccessDeniedException) when calling the StartQueryExecution operation: You are not authorized to perform: athena:StartQueryExecution on the resource. After your AWS administrator or you have updated your permissions, please try again."
+7,analyst lists the lake in S3,AccessDenied,True,"aws: [ERROR]: An error occurred (AccessDenied) when calling the ListObjectsV2 operation: User: arn:aws:sts::<account-id>:assumed-role/mvela-ops-analyst/mvela-analyst-check is not authorized to perform: s3:ListBucket on resource: ""arn:aws:s3:::<lake bucket>"" because no identity-based policy allows th"

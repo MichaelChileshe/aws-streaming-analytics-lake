@@ -1,0 +1,23 @@
+{
+ "label": "q1-json",
+ "workgroup": "mvela-engineering",
+ "query_id": "95f02902-0676-4019-947c-b2d37f3a7864",
+ "state": "SUCCEEDED",
+ "reason": "",
+ "data_scanned_bytes": 7717247824,
+ "data_scanned": "7.19 GB",
+ "engine_ms": 1665,
+ "total_ms": 4946,
+ "statement_type": "DML",
+ "cost_usd": 0.035094,
+ "wall_seconds": 7.8,
+ "header": [
+  "truck_id",
+  "pings",
+  "max_kmh",
+  "avg_kmh",
+  "seconds_over_80"
+ ],
+ "row_count": 300,
+ "sql": "SELECT truck_id,\n       count(*)                     AS pings,\n       max(speed_kmh)               AS max_kmh,\n       round(avg(speed_kmh), 1)     AS avg_kmh,\n       count_if(speed_kmh > 80) * 5 AS seconds_over_80\nFROM mvela_fleet.raw_pings_json\nWHERE event_ms >= 1791331200000 AND event_ms < 1791417600000\nGROUP BY truck_id\nORDER BY truck_id"
+}

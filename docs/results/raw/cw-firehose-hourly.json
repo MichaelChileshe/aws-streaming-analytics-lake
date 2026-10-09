@@ -1,0 +1,45 @@
+{
+ "namespace": "AWS/Firehose",
+ "dimensions": {
+  "DeliveryStreamName": "mvela-fleet-to-lake"
+ },
+ "start_utc": "2026-10-09T03:28:00+00:00",
+ "end_utc": "2026-10-09T07:28:00+00:00",
+ "period_s": 3600,
+ "metrics": {
+  "DataReadFromKinesisStream.Records": [
+   {
+    "utc": "04:28",
+    "Sum": 0.0
+   },
+   {
+    "utc": "05:28",
+    "Sum": 213360.0
+   },
+   {
+    "utc": "06:28",
+    "Sum": 201300.0
+   }
+  ],
+  "DeliveryToS3.Records": [
+   {
+    "utc": "05:28",
+    "Sum": 212734.0
+   },
+   {
+    "utc": "06:28",
+    "Sum": 201926.0
+   }
+  ],
+  "FailedConversion.Records": [
+   {
+    "utc": "05:28",
+    "Sum": 0.0
+   },
+   {
+    "utc": "06:28",
+    "Sum": 0.0
+   }
+  ]
+ }
+}
